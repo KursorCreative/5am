@@ -20,31 +20,31 @@ const Index = () => {
         <Navbar />
       </div>
       
-      <div id="home" className="relative w-full lg:relative lg:left-1/2 lg:-translate-x-1/2 lg:w-screen max-w-[2000px] mx-auto">
+      <div id="home" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
         <Hero />
       </div>
       
-      <div id="about" className="relative w-full lg:relative lg:left-1/2 lg:-translate-x-1/2 lg:w-screen max-w-[2000px] mx-auto">
+      <div id="about" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
         <About />
       </div>
       
-      <div id="services" className="relative w-full lg:relative lg:left-1/2 lg:-translate-x-1/2 lg:w-screen max-w-[2000px] mx-auto">
+      <div id="services" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
         <Services />
       </div>
       
-      <div id="portfolio" className="relative w-full lg:relative lg:left-1/2 lg:-translate-x-1/2 lg:w-screen max-w-[2000px] mx-auto">
+      <div id="portfolio" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
         <Portfolio />
       </div>
       
-      <div id="team" className="relative w-full lg:relative lg:left-1/2 lg:-translate-x-1/2 lg:w-screen max-w-[2000px] mx-auto">
+      <div id="team" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
         <TeamSection />
       </div>
       
-      <div id="hours" className="relative w-full lg:relative lg:left-1/2 lg:-translate-x-1/2 lg:w-screen max-w-[2000px] mx-auto">
+      <div id="hours" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
         <Hours />
       </div>
       
-      <div id="contact" className="relative w-full lg:relative lg:left-1/2 lg:-translate-x-1/2 lg:w-screen max-w-[2000px] mx-auto">
+      <div id="contact" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
         <Maps />
         <Footer />
       </div>
