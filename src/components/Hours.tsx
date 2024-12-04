@@ -17,7 +17,7 @@ const Hours = () => {
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-tattoo-black/80" />
+      <div className="absolute inset-0 bg-tattoo-black/50" />
       
       <div className="container relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-white">
