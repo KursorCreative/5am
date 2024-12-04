@@ -25,25 +25,15 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-[#f4f4f4] relative">
-      {/* Top Paint Divider */}
-      <svg
-        className="absolute top-0 left-0 w-full h-8"
-        preserveAspectRatio="none"
-        viewBox="0 0 1200 32"
-      >
-        <path
-          d="M0,0 Q300,32 600,16 T1200,0 V32 H0 Z"
-          fill="rgba(178, 34, 34, 0.7)"
-          className="opacity-70"
-        />
-        <path
-          d="M0,8 Q400,32 600,24 T1200,8 V32 H0 Z"
-          fill="rgba(178, 34, 34, 0.5)"
-          className="opacity-50"
-        />
-      </svg>
-
+    <section 
+      id="services" 
+      className="py-20 bg-[#f4f4f4] relative before:content-[''] before:absolute before:top-0 
+                 before:left-0 before:right-0 before:h-4 
+                 before:bg-gradient-to-r before:from-transparent before:via-tattoo-red/70 before:to-transparent
+                 after:content-[''] after:absolute after:bottom-0 
+                 after:left-0 after:right-0 after:h-4 
+                 after:bg-gradient-to-r after:from-transparent after:via-tattoo-red/70 after:to-transparent"
+    >
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-black">
           Our <span className="text-tattoo-red">Services</span>
@@ -62,24 +52,6 @@ const Services = () => {
           ))}
         </div>
       </div>
-
-      {/* Bottom Paint Divider */}
-      <svg
-        className="absolute bottom-0 left-0 w-full h-8 rotate-180"
-        preserveAspectRatio="none"
-        viewBox="0 0 1200 32"
-      >
-        <path
-          d="M0,0 Q300,32 600,16 T1200,0 V32 H0 Z"
-          fill="rgba(178, 34, 34, 0.7)"
-          className="opacity-70"
-        />
-        <path
-          d="M0,8 Q400,32 600,24 T1200,8 V32 H0 Z"
-          fill="rgba(178, 34, 34, 0.5)"
-          className="opacity-50"
-        />
-      </svg>
     </section>
   );
 };
