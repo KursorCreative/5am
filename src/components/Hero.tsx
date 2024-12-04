@@ -60,8 +60,8 @@ const Hero = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-4" />
-        <CarouselNext className="right-4" />
+        <CarouselPrevious className="left-4 [&>svg]:text-black" />
+        <CarouselNext className="right-4 [&>svg]:text-black" />
       </Carousel>
     </div>
   );
