@@ -183,7 +183,7 @@ const Navbar = () => {
               href="tel:+15551234567"
               className="flex items-center text-gray-300 hover:text-white transition-colors space-x-2 py-2 focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded"
               onClick={closeMenu}
-              aria-label="Call us at (555) 123-4567"
+              aria-label="Call us at (12) 123-4567"
             >
               <Phone size={20} />
               <span>(555) 123-4567</span>
