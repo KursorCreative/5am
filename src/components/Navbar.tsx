@@ -1,43 +1,41 @@
-import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
 import { Link } from "react-scroll";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { Phone } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useIsMobile();
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-tattoo-black/95 backdrop-blur-sm py-4">
+    <nav className="bg-tattoo-black/95 backdrop-blur-sm py-4 border-b-2 border-tattoo-red">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center transition-all duration-300 hover:bg-tattoo-gray/20 p-2 rounded-lg">
           <Link
             to="home"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={-70}
             duration={500}
-            className="text-2xl font-bold text-white cursor-pointer"
+            className="text-3xl font-bebas tracking-wider text-white hover:text-tattoo-red transition-colors"
           >
-            5<span className="text-tattoo-red">am</span>
+            5am
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8 font-bebas text-lg tracking-wider">
+          <div className="hidden md:flex items-center space-x-8">
             <Link
               to="about"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-70}
               duration={500}
-              className="text-gray-300 hover:text-white transition-colors cursor-pointer"
+              className="text-lg font-bebas tracking-wide text-white hover:text-tattoo-red transition-colors"
             >
               About
             </Link>
@@ -45,9 +43,9 @@ const Navbar = () => {
               to="services"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-70}
               duration={500}
-              className="text-gray-300 hover:text-white transition-colors cursor-pointer"
+              className="text-lg font-bebas tracking-wide text-white hover:text-tattoo-red transition-colors"
             >
               Services
             </Link>
@@ -55,9 +53,9 @@ const Navbar = () => {
               to="portfolio"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-70}
               duration={500}
-              className="text-gray-300 hover:text-white transition-colors cursor-pointer"
+              className="text-lg font-bebas tracking-wide text-white hover:text-tattoo-red transition-colors"
             >
               Portfolio
             </Link>
@@ -65,131 +63,25 @@ const Navbar = () => {
               to="team"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-70}
               duration={500}
-              className="text-gray-300 hover:text-white transition-colors cursor-pointer"
+              className="text-lg font-bebas tracking-wide text-white hover:text-tattoo-red transition-colors"
             >
               Team
-            </Link>
-            <Link
-              to="hours"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="text-gray-300 hover:text-white transition-colors cursor-pointer"
-            >
-              Hours
             </Link>
             <Link
               to="contact"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-70}
               duration={500}
-              className="text-gray-300 hover:text-white transition-colors cursor-pointer"
+              className="text-lg font-bebas tracking-wide text-white hover:text-tattoo-red transition-colors flex items-center gap-2"
             >
               Contact Us
+              <Phone className="h-4 w-4" />
             </Link>
-            <a 
-              href="tel:+15551234567"
-              className="flex items-center text-gray-300 hover:text-white transition-colors space-x-2 focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded"
-              aria-label="Call us at (555) 123-4567"
-            >
-              <Phone size={20} />
-              <span>(555) 123-4567</span>
-            </a>
           </div>
-
-          <button
-            onClick={toggleMenu}
-            className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="md:hidden mt-4 bg-tattoo-gray rounded-lg p-4 font-bebas text-lg tracking-wider">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="block py-2 text-gray-300 hover:text-white transition-colors cursor-pointer"
-              onClick={closeMenu}
-            >
-              About
-            </Link>
-            <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="block py-2 text-gray-300 hover:text-white transition-colors cursor-pointer"
-              onClick={closeMenu}
-            >
-              Services
-            </Link>
-            <Link
-              to="portfolio"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="block py-2 text-gray-300 hover:text-white transition-colors cursor-pointer"
-              onClick={closeMenu}
-            >
-              Portfolio
-            </Link>
-            <Link
-              to="team"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="block py-2 text-gray-300 hover:text-white transition-colors cursor-pointer"
-              onClick={closeMenu}
-            >
-              Team
-            </Link>
-            <Link
-              to="hours"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="block py-2 text-gray-300 hover:text-white transition-colors cursor-pointer"
-              onClick={closeMenu}
-            >
-              Hours
-            </Link>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="block py-2 text-gray-300 hover:text-white transition-colors cursor-pointer"
-              onClick={closeMenu}
-            >
-              Contact Us
-            </Link>
-            <a 
-              href="tel:+15551234567"
-              className="flex items-center text-gray-300 hover:text-white transition-colors space-x-2 py-2 focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded"
-              onClick={closeMenu}
-              aria-label="Call us at (555) 123-4567"
-            >
-              <Phone size={20} />
-              <span>(555) 123-4567</span>
-            </a>
-          </div>
-        )}
       </div>
     </nav>
   );
