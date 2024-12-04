@@ -93,9 +93,15 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "subtle-shake": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "25%": { transform: "translateX(-2px)" },
+          "75%": { transform: "translateX(2px)" }
+        }
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
+        "subtle-shake": "subtle-shake 2s ease-in-out infinite"
       },
     },
   },
