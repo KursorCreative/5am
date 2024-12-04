@@ -48,7 +48,7 @@
 }
 
 .neon-border {
-  box-shadow: 0 0 5px theme('colors.tattoo.blue'),
-              0 0 10px theme('colors.tattoo.blue'),
-              0 0 15px theme('colors.tattoo.blue');
+  box-shadow: 0 0 5px #ccc,
+              0 0 10px #ccc,
+              0 0 15px #ccc;
 }

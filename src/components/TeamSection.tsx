@@ -53,7 +53,7 @@ const TeamSection = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="bg-white p-6 rounded-lg border border-tattoo-purple/50 neon-border hover:border-tattoo-purple hover:scale-105 transition-all duration-300"
+              className="bg-white p-6 rounded-lg border border-gray-300 neon-border hover:border-gray-400 hover:scale-105 transition-all duration-300"
             >
               <img
                 src={member.image}
