@@ -35,14 +35,14 @@ const Newsletter = () => {
         Subscribe to get updates on new artists and special offers.
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col gap-3">
           <input
             type="email"
             placeholder="Your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1 px-4 py-2.5 bg-tattoo-gray text-white rounded-md 
+            className="w-full px-4 py-2.5 bg-tattoo-gray text-white rounded-md 
                      border border-transparent focus:border-tattoo-red
                      focus:outline-none focus:ring-2 focus:ring-tattoo-red/20
                      placeholder:text-gray-400 text-sm sm:text-base"
@@ -51,7 +51,7 @@ const Newsletter = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="px-6 py-2.5 bg-tattoo-red text-white rounded-md 
+            className="w-full sm:w-auto px-6 py-2.5 bg-tattoo-red text-white rounded-md 
                      hover:bg-tattoo-red/90 transition-colors 
                      disabled:opacity-50 disabled:cursor-not-allowed
                      focus:outline-none focus:ring-2 focus:ring-tattoo-red 
