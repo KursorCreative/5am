@@ -49,8 +49,8 @@ const Hero = () => {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="left-4 bg-white hover:bg-gray-100" />
-        <CarouselNext className="right-4 bg-white hover:bg-gray-100" />
+        <CarouselPrevious className="left-4 bg-tattoo-black text-white hover:bg-tattoo-gray" />
+        <CarouselNext className="right-4 bg-tattoo-black text-white hover:bg-tattoo-gray" />
       </Carousel>
 
       {/* Scroll Mouse Icon */}
