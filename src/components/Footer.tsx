@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Facebook, Mail, MapPin, Phone, ArrowUp } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -58,8 +58,23 @@ const Footer = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <footer className="bg-tattoo-black py-12">
+    <footer className="bg-tattoo-black py-12 relative">
+      <button
+        onClick={scrollToTop}
+        className="absolute right-8 -top-6 bg-tattoo-red hover:bg-tattoo-red/90 text-white p-3 rounded-full transition-all duration-300 hover:transform hover:-translate-y-1"
+        aria-label="Scroll to top"
+      >
+        <ArrowUp size={24} />
+      </button>
+
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
