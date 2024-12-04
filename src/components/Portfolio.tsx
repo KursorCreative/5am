@@ -48,9 +48,9 @@ const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="portfolio" className="py-20 bg-tattoo-black">
+    <section id="portfolio" className="py-20 bg-[#f4f4f4]">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
           Our <span className="text-tattoo-purple">Portfolio</span>
         </h2>
 
@@ -71,7 +71,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-3xl bg-tattoo-black border-tattoo-purple">
+              <DialogContent className="max-w-3xl bg-white border-tattoo-purple">
                 <img
                   src={image.src}
                   alt={image.alt}

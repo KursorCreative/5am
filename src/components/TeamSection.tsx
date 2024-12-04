@@ -3,7 +3,6 @@ import {
   Instagram,
   Linkedin,
   Twitter,
-  Github,
 } from "lucide-react";
 
 const teamMembers = [
@@ -44,9 +43,9 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <section className="py-20 bg-tattoo-gray">
+    <section className="py-20 bg-[#f4f4f4]">
       <div className="container px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
           Meet Our <span className="text-tattoo-purple">Artists</span>
         </h2>
         
@@ -54,16 +53,16 @@ const TeamSection = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="bg-tattoo-black p-6 rounded-lg border border-tattoo-purple neon-border"
+              className="bg-white p-6 rounded-lg border border-tattoo-purple neon-border"
             >
               <img
                 src={member.image}
                 alt={member.name}
                 className="w-full h-64 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+              <h3 className="text-xl font-bold mb-1 text-black">{member.name}</h3>
               <p className="text-tattoo-purple font-medium mb-2">{member.role}</p>
-              <p className="text-gray-400 mb-4">{member.bio}</p>
+              <p className="text-gray-600 mb-4">{member.bio}</p>
               
               <div className="flex gap-4 justify-center">
                 {member.social.instagram && (
@@ -71,7 +70,7 @@ const TeamSection = () => {
                     href={member.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-tattoo-purple transition-colors"
+                    className="text-gray-600 hover:text-tattoo-purple transition-colors"
                   >
                     <Instagram className="w-5 h-5" />
                   </a>
@@ -81,7 +80,7 @@ const TeamSection = () => {
                     href={member.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-tattoo-purple transition-colors"
+                    className="text-gray-600 hover:text-tattoo-purple transition-colors"
                   >
                     <Facebook className="w-5 h-5" />
                   </a>
@@ -91,7 +90,7 @@ const TeamSection = () => {
                     href={member.social.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-tattoo-purple transition-colors"
+                    className="text-gray-600 hover:text-tattoo-purple transition-colors"
                   >
                     <Twitter className="w-5 h-5" />
                   </a>
@@ -101,7 +100,7 @@ const TeamSection = () => {
                     href={member.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-tattoo-purple transition-colors"
+                    className="text-gray-600 hover:text-tattoo-purple transition-colors"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
