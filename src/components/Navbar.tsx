@@ -30,7 +30,7 @@ const Navbar = () => {
             5<span className="text-tattoo-red">am</span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 font-bebas text-lg tracking-wider">
             <Link
               to="about"
               spy={true}
@@ -112,7 +112,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 bg-tattoo-gray rounded-lg p-4">
+          <div className="md:hidden mt-4 bg-tattoo-gray rounded-lg p-4 font-bebas text-lg tracking-wider">
             <Link
               to="about"
               spy={true}
