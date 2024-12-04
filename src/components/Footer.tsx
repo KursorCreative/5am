@@ -69,7 +69,7 @@ const Footer = () => {
     <footer className="bg-tattoo-black py-12 relative">
       <button
         onClick={scrollToTop}
-        className="absolute right-8 -top-6 bg-tattoo-red hover:bg-tattoo-red/90 text-white p-3 rounded-full transition-all duration-300 hover:transform hover:-translate-y-1"
+        className="absolute right-8 -top-6 bg-tattoo-red hover:bg-tattoo-red/90 text-white p-3 rounded-full transition-all duration-300 hover:transform hover:-translate-y-1 focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 focus:outline-none"
         aria-label="Scroll to top"
       >
         <ArrowUp size={24} />
@@ -79,19 +79,31 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              5<span className="text-tattoo-purple">am</span>
+              5<span className="text-tattoo-red">am</span>
             </h3>
             <p className="text-gray-400 mb-4">
               Premium tattoo studio specializing in custom designs and professional service.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-tattoo-purple transition-colors">
+              <a 
+                href="#" 
+                className="text-white hover:text-tattoo-red transition-colors focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded-full"
+                aria-label="Follow us on Instagram"
+              >
                 <Instagram size={24} />
               </a>
-              <a href="#" className="text-white hover:text-tattoo-purple transition-colors">
+              <a 
+                href="#" 
+                className="text-white hover:text-tattoo-red transition-colors focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded-full"
+                aria-label="Follow us on Facebook"
+              >
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-white hover:text-tattoo-purple transition-colors">
+              <a 
+                href="#" 
+                className="text-white hover:text-tattoo-red transition-colors focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded-full"
+                aria-label="Send us an email"
+              >
                 <Mail size={24} />
               </a>
             </div>
@@ -102,15 +114,35 @@ const Footer = () => {
             <div className="space-y-4">
               <p className="flex items-center text-gray-400">
                 <MapPin className="mr-2" size={20} />
-                123 Ink Street, Art District
+                <a 
+                  href="https://maps.google.com" 
+                  className="hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors underline decoration-tattoo-red/30 hover:decoration-tattoo-red"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Find us at 123 Ink Street, Art District (opens in new tab)"
+                >
+                  123 Ink Street, Art District
+                </a>
               </p>
               <p className="flex items-center text-gray-400">
                 <Phone className="mr-2" size={20} />
-                (555) 123-4567
+                <a 
+                  href="tel:+15551234567" 
+                  className="hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors underline decoration-tattoo-red/30 hover:decoration-tattoo-red"
+                  aria-label="Call us at (555) 123-4567"
+                >
+                  (555) 123-4567
+                </a>
               </p>
               <p className="flex items-center text-gray-400">
                 <Mail className="mr-2" size={20} />
-                info@5amtattoo.com
+                <a 
+                  href="mailto:info@5amtattoo.com" 
+                  className="hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors underline decoration-tattoo-red/30 hover:decoration-tattoo-red"
+                  aria-label="Email us at info@5amtattoo.com"
+                >
+                  info@5amtattoo.com
+                </a>
               </p>
             </div>
           </div>
@@ -159,7 +191,13 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-tattoo-gray text-center text-gray-400">
-          <p>&copy; 2024 5am Tattoo Studio. All rights reserved. | Site by <a href="https://kursorcreative.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kursor Creative</a></p>
+          <p>&copy; 2024 5am Tattoo Studio. All rights reserved. | Site by <a 
+            href="https://kursorcreative.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors underline decoration-tattoo-red/30 hover:decoration-tattoo-red"
+            aria-label="Visit Kursor Creative website (opens in new tab)"
+          >Kursor Creative</a></p>
         </div>
       </div>
     </footer>
