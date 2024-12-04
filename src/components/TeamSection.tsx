@@ -8,7 +8,7 @@ import {
 const teamMembers = [
   {
     id: 1,
-    name: "Caprice",
+    name: "Jake",
     role: "Lead Artist",
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
     bio: "Specializing in traditional Japanese tattoos with 10+ years of experience",
@@ -19,7 +19,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Sarah Chen",
+    name: "Joseph",
     role: "Neo-Traditional Artist",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
     bio: "Award-winning artist known for bold colors and unique designs",
@@ -30,7 +30,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Marcus Black",
+    name: "Caprice",
     role: "Blackwork Specialist",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
     bio: "Pushing the boundaries of geometric and abstract tattoo designs",
