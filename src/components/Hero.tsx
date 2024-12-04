@@ -1,6 +1,7 @@
 import { CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Carousel } from "@/components/ui/carousel";
 import { Mouse, ChevronLeft, ChevronRight, Instagram, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const images = [
   {
@@ -64,6 +65,12 @@ const Hero = () => {
                   Experience the art of tattooing in a modern studio environment.
                   Our skilled artists bring your vision to life.
                 </p>
+                <Button 
+                  className="bg-tattoo-red hover:bg-tattoo-red/90 text-white px-8 py-6 text-lg animate-fade-up"
+                  onClick={() => window.location.href = '#contact'}
+                >
+                  Book Your Tattoo
+                </Button>
               </div>
             </CarouselItem>
           ))}
