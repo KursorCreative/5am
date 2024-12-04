@@ -11,6 +11,7 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsOpen(false);
   };
 
   const navItems = [
@@ -35,7 +36,10 @@ const Navbar = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              onClick={() => handleScroll(item.toLowerCase())}
+              onClick={(e) => {
+                e.preventDefault();
+                handleScroll(item.toLowerCase());
+              }}
               className={`text-white transition-all duration-200 border-b-2 ${
                 activeLink === item.toLowerCase()
                   ? "border-tattoo-red text-tattoo-red"
@@ -62,9 +66,9 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   handleScroll(item.toLowerCase());
-                  setIsOpen(false);
                 }}
                 className={`text-white transition-all duration-200 border-b-2 ${
                   activeLink === item.toLowerCase()
