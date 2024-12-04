@@ -27,7 +27,6 @@ const images = [
 const Hero = () => {
   return (
     <section className="relative h-screen" aria-label="Hero section">
-      {/* Social Icons */}
       <div className="absolute left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col gap-6 pt-[250px]" aria-label="Social media links">
         <a 
           href="#" 
@@ -92,10 +91,10 @@ const Hero = () => {
       </Carousel>
 
       {/* Scroll Mouse Icon */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
-        <div className="flex flex-col items-center gap-2">
-          <Mouse className="w-6 h-6 text-white" />
-          <span className="text-sm text-white">Scroll Down</span>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full px-4 sm:px-0" aria-hidden="true">
+        <div className="flex flex-col items-center justify-center gap-2 mx-auto">
+          <Mouse className="w-6 h-6 text-white animate-pulse" />
+          <span className="text-sm text-white font-medium tracking-wider">Scroll Down</span>
         </div>
       </div>
     </section>
