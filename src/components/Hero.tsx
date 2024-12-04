@@ -46,7 +46,14 @@ const Hero = () => {
         </a>
       </div>
 
-      <Carousel className="w-full h-full" aria-label="Image carousel">
+      <Carousel 
+        className="w-full h-full" 
+        aria-label="Image carousel"
+        opts={{
+          loop: true,
+          align: "start"
+        }}
+      >
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index} className="relative h-screen" role="group" aria-roledescription="slide">
