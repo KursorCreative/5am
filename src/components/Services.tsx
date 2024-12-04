@@ -1,4 +1,4 @@
-import { Paintbrush, Scissors, Clock, Users } from "lucide-react";
+import { Paintbrush, BriefcaseMedical, Clock, Users } from "lucide-react";
 
 const services = [
   {
@@ -7,7 +7,7 @@ const services = [
     description: "Unique tattoos tailored to your vision and style.",
   },
   {
-    icon: Scissors,
+    icon: BriefcaseMedical,
     title: "Professional Equipment",
     description: "Top-quality, sterilized equipment for your safety.",
   },
