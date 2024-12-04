@@ -69,7 +69,7 @@ const Hero = () => {
                   className="bg-tattoo-red hover:bg-tattoo-red/90 text-white px-8 py-6 text-lg animate-fade-up"
                   onClick={() => window.location.href = '#contact'}
                 >
-                  Book Your Tattoo
+                  Book your tattoo
                 </Button>
               </div>
             </CarouselItem>
