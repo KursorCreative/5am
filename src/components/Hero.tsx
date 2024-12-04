@@ -34,7 +34,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-tattoo-black to-tattoo-black/70" />
               </div>
               
-              <div className="relative container h-full flex flex-col justify-center items-start py-14">
+              <div className="relative container h-full flex flex-col justify-center items-start py-8">
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up">
                   {image.caption}
                   <br />
