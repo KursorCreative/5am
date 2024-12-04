@@ -27,7 +27,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-[#f4f4f4]">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black relative inline-block mx-auto after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-1 after:bg-tattoo-purple after:rounded-full">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
           Our <span className="text-tattoo-purple">Services</span>
         </h2>
         
