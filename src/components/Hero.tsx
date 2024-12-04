@@ -49,11 +49,11 @@ const Hero = () => {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="left-4 bg-tattoo-black text-white hover:bg-tattoo-gray w-12 h-12">
-          <ChevronLeft className="w-8 h-8" />
+        <CarouselPrevious className="left-4 bg-tattoo-black text-white hover:bg-tattoo-gray w-16 h-16">
+          <ChevronLeft className="w-12 h-12" />
         </CarouselPrevious>
-        <CarouselNext className="right-4 bg-tattoo-black text-white hover:bg-tattoo-gray w-12 h-12">
-          <ChevronRight className="w-8 h-8" />
+        <CarouselNext className="right-4 bg-tattoo-black text-white hover:bg-tattoo-gray w-16 h-16">
+          <ChevronRight className="w-12 h-12" />
         </CarouselNext>
       </Carousel>
 
