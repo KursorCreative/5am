@@ -25,7 +25,15 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-[#f4f4f4]">
+    <section 
+      id="services" 
+      className="py-20 bg-[#f4f4f4] relative before:content-[''] before:absolute before:top-0 
+                 before:left-0 before:right-0 before:h-4 
+                 before:bg-gradient-to-r before:from-transparent before:via-tattoo-red/70 before:to-transparent
+                 after:content-[''] after:absolute after:bottom-0 
+                 after:left-0 after:right-0 after:h-4 
+                 after:bg-gradient-to-r after:from-transparent after:via-tattoo-red/70 after:to-transparent"
+    >
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-black">
           Our <span className="text-tattoo-red">Services</span>
