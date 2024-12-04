@@ -45,8 +45,8 @@ const TeamSection = () => {
   return (
     <section className="py-20 bg-[#f4f4f4]">
       <div className="container px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
-          Meet Our <span className="text-tattoo-purple">Artists</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-black">
+          Meet Our <span className="text-tattoo-red">Artists</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,8 +60,8 @@ const TeamSection = () => {
                 alt={member.name}
                 className="w-full h-64 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-bold mb-1 text-black">{member.name}</h3>
-              <p className="text-tattoo-purple font-medium mb-2">{member.role}</p>
+              <h3 className="text-xl font-bold mb-1 text-tattoo-black">{member.name}</h3>
+              <p className="text-tattoo-red font-medium mb-2">{member.role}</p>
               <p className="text-gray-600 mb-4">{member.bio}</p>
               
               <div className="flex gap-4 justify-center">
@@ -70,7 +70,7 @@ const TeamSection = () => {
                     href={member.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-tattoo-purple transition-colors"
+                    className="text-gray-600 hover:text-tattoo-red transition-colors"
                   >
                     <Instagram className="w-5 h-5" />
                   </a>
@@ -80,7 +80,7 @@ const TeamSection = () => {
                     href={member.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-tattoo-purple transition-colors"
+                    className="text-gray-600 hover:text-tattoo-red transition-colors"
                   >
                     <Facebook className="w-5 h-5" />
                   </a>
@@ -90,7 +90,7 @@ const TeamSection = () => {
                     href={member.social.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-tattoo-purple transition-colors"
+                    className="text-gray-600 hover:text-tattoo-red transition-colors"
                   >
                     <Twitter className="w-5 h-5" />
                   </a>
@@ -100,7 +100,7 @@ const TeamSection = () => {
                     href={member.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-tattoo-purple transition-colors"
+                    className="text-gray-600 hover:text-tattoo-red transition-colors"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>

@@ -11,8 +11,8 @@ const About = () => {
             />
           </div>
           <div className="space-y-6 animate-fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-black">
-              About <span className="text-tattoo-purple">5am</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-tattoo-black">
+              About <span className="text-tattoo-red">5am</span>
             </h2>
             <p className="text-gray-600 leading-relaxed">
               Welcome to 5am, where artistry meets innovation in the world of tattoos. 
