@@ -21,7 +21,7 @@ const teamMembers = [
     id: 2,
     name: "Joseph",
     role: "Neo-Traditional Artist",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
     bio: "Award-winning artist known for bold colors and unique designs",
     social: {
       instagram: "https://instagram.com/sarahchen",
@@ -32,7 +32,7 @@ const teamMembers = [
     id: 3,
     name: "Caprice",
     role: "Blackwork Specialist",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
     bio: "Pushing the boundaries of geometric and abstract tattoo designs",
     social: {
       instagram: "https://instagram.com/marcusblack",
