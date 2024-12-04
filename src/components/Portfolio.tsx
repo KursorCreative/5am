@@ -7,37 +7,37 @@ import {
 const portfolioImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1590246814883-55516d8c2470",
+    src: "https://images.unsplash.com/photo-1590246814883-55516d8c2470?q=80&w=2070&auto=format&fit=crop",
     alt: "Traditional style tattoo",
     category: "Traditional",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1562962230-16e4623d36e6",
+    src: "https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=1935&auto=format&fit=crop",
     alt: "Neo-traditional tattoo art",
     category: "Neo-Traditional",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1542856391-010fb87dcfed",
+    src: "https://images.unsplash.com/photo-1542856391-010fb87dcfed?q=80&w=2070&auto=format&fit=crop",
     alt: "Blackwork style tattoo",
     category: "Blackwork",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d",
+    src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=1974&auto=format&fit=crop",
     alt: "Japanese style tattoo",
     category: "Japanese",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd",
+    src: "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?q=80&w=1974&auto=format&fit=crop",
     alt: "Minimalist tattoo design",
     category: "Minimalist",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28",
+    src: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=1974&auto=format&fit=crop",
     alt: "Watercolor style tattoo",
     category: "Watercolor",
   },
