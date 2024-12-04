@@ -12,25 +12,25 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-tattoo-black text-white">
       <Navbar />
-      <div id="home">
+      <div id="home" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
         <Hero />
       </div>
-      <div id="about">
+      <div id="about" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
         <About />
       </div>
-      <div id="services">
+      <div id="services" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
         <Services />
       </div>
-      <div id="portfolio">
+      <div id="portfolio" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
         <Portfolio />
       </div>
-      <div id="team">
+      <div id="team" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
         <TeamSection />
       </div>
-      <div id="hours">
+      <div id="hours" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
         <Hours />
       </div>
-      <div id="contact">
+      <div id="contact" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
         <Maps />
         <Footer />
       </div>
