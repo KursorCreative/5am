@@ -159,7 +159,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-tattoo-gray text-center text-gray-400">
-          <p>&copy; 2024 5am Tattoo Studio. All rights reserved.</p>
+          <p>&copy; 2024 5am Tattoo Studio. All rights reserved. | Site by <a href="https://kursorcreative.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kursor Creative</a></p>
         </div>
       </div>
     </footer>
