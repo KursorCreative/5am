@@ -5,8 +5,8 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-              alt="Tattoo artist at work"
+              src="https://images.unsplash.com/photo-1542382257-80dedb725088"
+              alt="Tattoo artist working on a detailed design"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
