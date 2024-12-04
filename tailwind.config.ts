@@ -25,9 +25,12 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         tattoo: {
-          black: "#0A0A0A",
-          purple: "#B026FF",
-          gray: "#2A2A2A",
+          black: "#0D0D0D",      // Deep Black
+          gray: "#2E2E2E",       // Dark Gray
+          red: "#B22222",        // Blood Red
+          blue: "#1E90FF",       // Electric Blue
+          gold: "#D4AF37",       // Metallic Gold
+          white: "#FFFFFF",      // Pure White
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -61,6 +64,8 @@ export default {
       fontFamily: {
         space: ["Space Grotesk", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       keyframes: {
         "fade-up": {
