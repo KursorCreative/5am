@@ -14,8 +14,23 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "sm": "640px",     // Small devices
+        "md": "768px",     // Medium devices
+        "lg": "1024px",    // Large devices
+        "xl": "1280px",    // Extra large devices
+        "2xl": "1400px",   // 2XL devices
+        "3xl": "1600px",   // Ultra-wide devices
       },
+    },
+    screens: {
+      'xs': '375px',      // iPhone SE
+      'sm': '640px',      // Small tablets
+      'md': '768px',      // Tablets
+      'lg': '1024px',     // Small laptops
+      'xl': '1280px',     // Laptops
+      '2xl': '1400px',    // Desktops
+      '3xl': '1600px',    // Ultra-wide
+      'tall': { 'raw': '(min-height: 800px)' }, // Tall devices like S23 Ultra
     },
     extend: {
       colors: {

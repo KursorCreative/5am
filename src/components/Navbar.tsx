@@ -31,7 +31,7 @@ const Navbar = () => {
           5<span className="text-tattoo-red">am</span>
         </a>
         
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden lg:flex space-x-6 xl:space-x-8">
           {navItems.map((item) => (
             <a
               key={item}
@@ -52,15 +52,22 @@ const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-white"
+          className="lg:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-tattoo-black/90 backdrop-blur-sm py-4">
+        <div 
+          className="lg:hidden absolute top-full left-0 w-full bg-tattoo-black/90 backdrop-blur-sm py-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+        >
           <div className="container mx-auto px-4 flex flex-col space-y-4">
             {navItems.map((item) => (
               <a
