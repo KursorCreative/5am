@@ -48,7 +48,7 @@ const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="portfolio" className="py-20 bg-[#f4f4f4]">
+    <section id="portfolio" className="py-20 bg-white">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
           Our <span className="text-tattoo-purple">Portfolio</span>
