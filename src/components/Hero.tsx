@@ -1,6 +1,6 @@
 import { CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Carousel } from "@/components/ui/carousel";
-import { Mouse, ChevronLeft, ChevronRight } from "lucide-react";
+import { Mouse, ChevronLeft, ChevronRight, Instagram, Mail } from "lucide-react";
 
 const images = [
   {
@@ -23,6 +23,24 @@ const images = [
 const Hero = () => {
   return (
     <section className="relative h-screen">
+      {/* Social Icons */}
+      <div className="absolute left-8 top-1/2 -translate-y-1/2 z-10 flex flex-col gap-6">
+        <a 
+          href="#" 
+          className="text-white hover:text-tattoo-red transition-colors duration-300"
+          aria-label="Follow us on Instagram"
+        >
+          <Instagram size={24} />
+        </a>
+        <a 
+          href="#" 
+          className="text-white hover:text-tattoo-red transition-colors duration-300"
+          aria-label="Contact us via email"
+        >
+          <Mail size={24} />
+        </a>
+      </div>
+
       <Carousel className="w-full h-full">
         <CarouselContent>
           {images.map((image, index) => (
