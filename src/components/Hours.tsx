@@ -38,6 +38,9 @@ const Hours = () => {
                 <span className="text-tattoo-white font-medium">{schedule.time}</span>
               </div>
             ))}
+            <p className="text-tattoo-gold text-sm italic text-center pt-4">
+              * Note: Open by appointment and closed public holidays *
+            </p>
           </div>
         </div>
       </div>
