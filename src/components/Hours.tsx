@@ -9,9 +9,11 @@ const hours = [
 const Hours = () => {
   return (
     <section 
-      className="relative py-20 bg-fixed bg-cover bg-center"
+      className="relative py-20 bg-no-repeat bg-center min-h-[600px]"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1590246814883-55516d74fec6')"
+        backgroundImage: "url('https://images.unsplash.com/photo-1590246814883-55516d74fec6')",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover"
       }}
     >
       {/* Dark overlay */}
