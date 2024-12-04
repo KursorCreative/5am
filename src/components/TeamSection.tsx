@@ -10,7 +10,7 @@ const teamMembers = [
     id: 1,
     name: "Jake",
     role: "Lead Artist",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974&auto=format&fit=crop",
     bio: "Specializing in traditional Japanese tattoos with 10+ years of experience",
     social: {
       instagram: "https://instagram.com/alexrivers",
