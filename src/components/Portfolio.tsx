@@ -7,7 +7,7 @@ import {
 const portfolioImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1590246814883-55516d8c2470?q=80&w=2070&auto=format&fit=crop",
+    src: "https://images.unsplash.com/photo-1542856391-010fb87dcfed?q=80&w=2070&auto=format&fit=crop",
     alt: "Traditional style tattoo",
     category: "Traditional",
   },
