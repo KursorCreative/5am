@@ -8,7 +8,7 @@ import {
 const teamMembers = [
   {
     id: 1,
-    name: "Jake",
+    name: "Joseph",
     role: "Lead Artist",
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
     bio: "Specializing in traditional Japanese tattoos with 10+ years of experience",
