@@ -7,37 +7,37 @@ import {
 const portfolioImages = [
   {
     id: 1,
-    src: "/placeholder.svg",
+    src: "https://images.unsplash.com/photo-1590246814883-55516d8c2470",
     alt: "Traditional style tattoo",
     category: "Traditional",
   },
   {
     id: 2,
-    src: "/placeholder.svg",
+    src: "https://images.unsplash.com/photo-1562962230-16e4623d36e6",
     alt: "Neo-traditional tattoo art",
     category: "Neo-Traditional",
   },
   {
     id: 3,
-    src: "/placeholder.svg",
+    src: "https://images.unsplash.com/photo-1542856391-010fb87dcfed",
     alt: "Blackwork style tattoo",
     category: "Blackwork",
   },
   {
     id: 4,
-    src: "/placeholder.svg",
+    src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d",
     alt: "Japanese style tattoo",
     category: "Japanese",
   },
   {
     id: 5,
-    src: "/placeholder.svg",
+    src: "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd",
     alt: "Minimalist tattoo design",
     category: "Minimalist",
   },
   {
     id: 6,
-    src: "/placeholder.svg",
+    src: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28",
     alt: "Watercolor style tattoo",
     category: "Watercolor",
   },
