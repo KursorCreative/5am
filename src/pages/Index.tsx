@@ -12,25 +12,25 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-tattoo-black text-white">
       <Navbar />
-      <div id="home" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
+      <div id="home" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)]">
         <Hero />
       </div>
-      <div id="about" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
+      <div id="about" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)]">
         <About />
       </div>
-      <div id="services" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
+      <div id="services" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)]">
         <Services />
       </div>
-      <div id="portfolio" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
+      <div id="portfolio" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)]">
         <Portfolio />
       </div>
-      <div id="team" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
+      <div id="team" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)]">
         <TeamSection />
       </div>
-      <div id="hours" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
+      <div id="hours" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)]">
         <Hours />
       </div>
-      <div id="contact" className="w-full lg:w-screen lg:-ml-[calc((100vw-1280px)/2)] xl:-ml-[calc((100vw-1280px)/2)]">
+      <div id="contact" className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)]">
         <Maps />
         <Footer />
       </div>
