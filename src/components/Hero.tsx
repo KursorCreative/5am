@@ -1,6 +1,6 @@
 import { CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Carousel } from "@/components/ui/carousel";
-import { Mouse, ChevronLeft, ChevronRight, Instagram, Mail } from "lucide-react";
+import { Mouse, ChevronLeft, ChevronRight, Instagram, Mail, CalendarPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const images = [
@@ -75,6 +75,7 @@ const Hero = () => {
                   onClick={() => window.location.href = '#contact'}
                   aria-label="Book your tattoo - Navigate to contact section"
                 >
+                  <CalendarPlus className="mr-2" />
                   Book your tattoo
                 </Button>
               </div>
