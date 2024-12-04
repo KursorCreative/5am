@@ -13,6 +13,16 @@ const Navbar = () => {
     }
   };
 
+  const navItems = [
+    "Home",
+    "About",
+    "Services",
+    "Portfolio",
+    "Team",
+    "Hours",
+    "Contact"
+  ];
+
   return (
     <nav className="fixed w-full bg-tattoo-black/90 backdrop-blur-sm z-50 py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -21,7 +31,7 @@ const Navbar = () => {
         </a>
         
         <div className="hidden md:flex space-x-8">
-          {["Home", "About", "Services", "Portfolio", "Contact"].map((item) => (
+          {navItems.map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -48,7 +58,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-tattoo-black/90 backdrop-blur-sm py-4">
           <div className="container mx-auto px-4 flex flex-col space-y-4">
-            {["Home", "About", "Services", "Portfolio", "Contact"].map((item) => (
+            {navItems.map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
