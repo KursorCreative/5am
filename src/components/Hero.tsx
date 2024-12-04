@@ -1,6 +1,6 @@
 import { CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Carousel } from "@/components/ui/carousel";
-import { Mouse } from "lucide-react";
+import { Mouse, ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   {
@@ -49,8 +49,12 @@ const Hero = () => {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="left-4 bg-tattoo-black text-white hover:bg-tattoo-gray" />
-        <CarouselNext className="right-4 bg-tattoo-black text-white hover:bg-tattoo-gray" />
+        <CarouselPrevious className="left-4 bg-tattoo-black text-white hover:bg-tattoo-gray w-12 h-12">
+          <ChevronLeft className="w-8 h-8" />
+        </CarouselPrevious>
+        <CarouselNext className="right-4 bg-tattoo-black text-white hover:bg-tattoo-gray w-12 h-12">
+          <ChevronRight className="w-8 h-8" />
+        </CarouselNext>
       </Carousel>
 
       {/* Scroll Mouse Icon */}
