@@ -11,7 +11,7 @@ const Hours = () => {
     <section 
       className="relative py-20 bg-no-repeat bg-center min-h-[600px]"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1590246814883-55516d74fec6')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28')",
         backgroundAttachment: "fixed",
         backgroundSize: "cover"
       }}
