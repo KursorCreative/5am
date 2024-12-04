@@ -10,43 +10,48 @@ export default {
   ],
   prefix: "",
   theme: {
+    // Responsive breakpoints configuration
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "sm": "640px",     // Small devices
-        "md": "768px",     // Medium devices
-        "lg": "1024px",    // Large devices
-        "xl": "1280px",    // Extra large devices
-        "2xl": "1400px",   // 2XL devices
-        "3xl": "1600px",   // Ultra-wide devices
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1400px",
+        "3xl": "1600px",
       },
     },
+    // Screen size breakpoints
     screens: {
-      'xs': '375px',      // iPhone SE
-      'sm': '640px',      // Small tablets
-      'md': '768px',      // Tablets
-      'lg': '1024px',     // Small laptops
-      'xl': '1280px',     // Laptops
-      '2xl': '1400px',    // Desktops
-      '3xl': '1600px',    // Ultra-wide
-      'tall': { 'raw': '(min-height: 800px)' }, // Tall devices like S23 Ultra
+      'xs': '375px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1400px',
+      '3xl': '1600px',
+      'tall': { 'raw': '(min-height: 800px)' },
     },
     extend: {
+      // Brand-specific color palette
       colors: {
+        // Tattoo studio specific colors
+        tattoo: {
+          black: "#0D0D0D",
+          gray: "#2E2E2E",
+          red: "#B22222",
+          blue: "#1E90FF",
+          gold: "#D4AF37",
+          white: "#FFFFFF",
+        },
+        // System UI colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        tattoo: {
-          black: "#0D0D0D",      // Deep Black
-          gray: "#2E2E2E",       // Dark Gray
-          red: "#B22222",        // Blood Red
-          blue: "#1E90FF",       // Electric Blue
-          gold: "#D4AF37",       // Metallic Gold
-          white: "#FFFFFF",      // Pure White
-        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -76,12 +81,14 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      // Typography configuration
       fontFamily: {
         space: ["Space Grotesk", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      // Animation definitions
       keyframes: {
         "fade-up": {
           "0%": {
@@ -99,6 +106,7 @@ export default {
           "75%": { transform: "translateX(2px)" }
         }
       },
+      // Animation utilities
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "subtle-shake": "subtle-shake 2s ease-in-out infinite"
