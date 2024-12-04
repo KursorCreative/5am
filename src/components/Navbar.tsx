@@ -14,7 +14,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-tattoo-black/95 backdrop-blur-sm py-4 border-b-2 border-tattoo-red">
+    <nav className="bg-tattoo-black/95 backdrop-blur-sm py-4">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center transition-all duration-300 hover:bg-tattoo-gray/20 p-2 rounded-lg">
           <Link
