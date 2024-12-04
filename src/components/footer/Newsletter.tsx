@@ -29,26 +29,34 @@ const Newsletter = () => {
   };
 
   return (
-    <div>
-      <h4 className="text-lg font-bold mb-4 text-gray-100">Newsletter</h4>
-      <p className="text-gray-300 mb-4">
+    <div className="w-full max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+      <h4 className="text-xl sm:text-2xl font-bebas tracking-wider mb-4 text-gray-100">Newsletter</h4>
+      <p className="text-sm sm:text-base text-gray-300 mb-6">
         Subscribe to get updates on new artists and special offers.
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="email"
             placeholder="Your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1 px-4 py-2 bg-tattoo-gray text-white rounded-md focus:outline-none focus:ring-2 focus:ring-tattoo-red"
+            className="flex-1 px-4 py-2.5 bg-tattoo-gray text-white rounded-md 
+                     border border-transparent focus:border-tattoo-red
+                     focus:outline-none focus:ring-2 focus:ring-tattoo-red/20
+                     placeholder:text-gray-400 text-sm sm:text-base"
             aria-label="Email address for newsletter"
           />
           <button
             type="submit"
             disabled={isLoading}
-            className="px-4 py-2 bg-tattoo-red text-white rounded-md hover:bg-tattoo-red/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2"
+            className="px-6 py-2.5 bg-tattoo-red text-white rounded-md 
+                     hover:bg-tattoo-red/90 transition-colors 
+                     disabled:opacity-50 disabled:cursor-not-allowed
+                     focus:outline-none focus:ring-2 focus:ring-tattoo-red 
+                     focus:ring-offset-2 focus:ring-offset-tattoo-black
+                     text-sm sm:text-base font-medium whitespace-nowrap"
           >
             {isLoading ? "Subscribing..." : "Subscribe"}
           </button>
