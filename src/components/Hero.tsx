@@ -24,20 +24,20 @@ const Hero = () => {
   return (
     <section className="relative h-screen">
       {/* Social Icons */}
-      <div className="absolute left-8 top-1/2 -translate-y-1/2 z-10 flex flex-col gap-6">
+      <div className="absolute left-8 top-1/2 -translate-y-1/2 z-10 flex flex-col gap-6 pt-[150px]">
         <a 
           href="#" 
-          className="text-white hover:text-tattoo-red transition-colors duration-300"
+          className="text-white hover:text-tattoo-red transition-colors duration-300 hover:scale-110 transform hover:rotate-6"
           aria-label="Follow us on Instagram"
         >
-          <Instagram size={24} />
+          <Instagram size={24} className="filter drop-shadow-lg" />
         </a>
         <a 
           href="#" 
-          className="text-white hover:text-tattoo-red transition-colors duration-300"
+          className="text-white hover:text-tattoo-red transition-colors duration-300 hover:scale-110 transform hover:rotate-6"
           aria-label="Contact us via email"
         >
-          <Mail size={24} />
+          <Mail size={24} className="filter drop-shadow-lg" />
         </a>
       </div>
 
