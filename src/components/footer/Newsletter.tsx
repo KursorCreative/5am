@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { supabase } from "@/lib/supabase";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -12,23 +11,19 @@ const Newsletter = () => {
     setIsLoading(true);
 
     try {
-      const { error } = await supabase.functions.invoke('subscribe-newsletter', {
-        body: { email }
-      });
-
-      if (error) throw error;
-
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       toast({
         title: "Success!",
-        description: "You've been successfully subscribed to our newsletter."
+        description: "This is a demo form. In production, this would subscribe you to the newsletter."
       });
       setEmail("");
     } catch (error) {
-      console.error('Newsletter subscription error:', error);
       toast({
         variant: "destructive",
         title: "Error",
-        description: "Failed to subscribe. Please try again later."
+        description: "This is a demo form. No actual subscription is processed."
       });
     } finally {
       setIsLoading(false);
