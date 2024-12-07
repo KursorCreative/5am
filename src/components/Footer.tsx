@@ -22,7 +22,7 @@ const Footer = () => {
       </button>
 
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-4 text-gray-100">
               5<span className="text-tattoo-red">am</span>
@@ -33,31 +33,40 @@ const Footer = () => {
             <SocialLinks />
           </div>
           
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-gray-100">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link 
+                  to="/portfolio" 
+                  className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/privacy-policy" 
+                  className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/disclaimer" 
+                  className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
+                >
+                  Disclaimer
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
           <ContactInfo />
         </div>
         
         <div className="mt-12 pt-8 border-t border-tattoo-gray">
-          <div className="flex flex-wrap justify-center gap-6 mb-6">
-            <Link 
-              to="/portfolio" 
-              className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
-            >
-              Portfolio
-            </Link>
-            <Link 
-              to="/privacy-policy" 
-              className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link 
-              to="/disclaimer" 
-              className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
-            >
-              Disclaimer
-            </Link>
-          </div>
-          
           <p className="text-gray-300 text-center">
             &copy; 2024 5am Tattoo Studio. All rights reserved. | 
             <a 
