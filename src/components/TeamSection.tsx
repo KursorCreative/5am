@@ -11,10 +11,11 @@ const teamMembers = [
     name: "Jake",
     role: "Lead Artist",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-    bio: "Specializing in traditional Japanese tattoos with 10+ years of experience",
+    bio: "With over a decade of experience in traditional Japanese tattoos, Jake has mastered the art of bringing ancient designs into the modern era. His work is characterized by bold lines, vibrant colors, and meticulous attention to detail. Specializing in large-scale pieces, Jake's portfolio includes everything from full back pieces to intricate sleeve designs.",
+    specialties: ["Traditional Japanese", "Large Scale Pieces", "Cover-ups"],
     social: {
-      instagram: "https://instagram.com/alexrivers",
-      facebook: "https://facebook.com/alexrivers",
+      instagram: "https://instagram.com/jake_tattoo",
+      facebook: "https://facebook.com/jake_tattoo",
     },
   },
   {
@@ -22,10 +23,11 @@ const teamMembers = [
     name: "Joseph",
     role: "Neo-Traditional Artist",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
-    bio: "Award-winning artist known for bold colors and unique designs",
+    bio: "Joseph brings a fresh perspective to traditional tattoo designs, infusing them with contemporary elements and bold color choices. His award-winning work has been featured in numerous tattoo magazines and conventions. Known for his unique ability to blend classic motifs with modern aesthetics, Joseph creates pieces that stand the test of time.",
+    specialties: ["Neo-Traditional", "Color Work", "Custom Designs"],
     social: {
-      instagram: "https://instagram.com/sarahchen",
-      twitter: "https://twitter.com/sarahchen",
+      instagram: "https://instagram.com/joseph_ink",
+      twitter: "https://twitter.com/joseph_ink",
     },
   },
   {
@@ -33,10 +35,11 @@ const teamMembers = [
     name: "Caprice",
     role: "Blackwork Specialist",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
-    bio: "Pushing the boundaries of geometric and abstract tattoo designs",
+    bio: "Caprice specializes in contemporary blackwork and geometric designs, pushing the boundaries of what's possible with black ink. Her minimalist approach and precise line work have earned her a dedicated following. She excels in creating powerful, meaningful pieces that incorporate sacred geometry and modern patterns.",
+    specialties: ["Blackwork", "Geometric", "Fine Line"],
     social: {
-      instagram: "https://instagram.com/marcusblack",
-      linkedin: "https://linkedin.com/in/marcusblack",
+      instagram: "https://instagram.com/caprice_tattoo",
+      linkedin: "https://linkedin.com/in/caprice_tattoo",
     },
   },
 ];
@@ -57,13 +60,13 @@ const TeamSection = () => {
           Meet Our <span className="text-tattoo-red">Artists</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {teamMembers.map((member) => (
             <div
               key={member.id}
               className="group relative overflow-hidden rounded-lg bg-gradient-to-b from-white to-gray-50 shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="relative overflow-hidden rounded-lg p-6">
+              <div className="relative overflow-hidden rounded-t-lg p-6">
                 <div className="relative mb-8 aspect-square overflow-hidden rounded-lg">
                   <img
                     src={member.image}
@@ -78,7 +81,21 @@ const TeamSection = () => {
                     {member.name}
                   </h3>
                   <p className="text-tattoo-red font-medium mb-4">{member.role}</p>
-                  <p className="text-gray-600 mb-6 text-sm">{member.bio}</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{member.bio}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-sm font-bold text-tattoo-black mb-2">Specialties:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {member.specialties.map((specialty, index) => (
+                        <span
+                          key={index}
+                          className="text-xs px-3 py-1 rounded-full bg-tattoo-red/10 text-tattoo-red"
+                        >
+                          {specialty}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   
                   <div className="flex gap-4 justify-center">
                     {member.social.instagram && (
