@@ -15,6 +15,7 @@ const About = () => {
               src="https://images.unsplash.com/photo-1542382257-80dedb725088"
               alt="Tattoo artist working on a detailed design"
               className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           <div className="space-y-6 animate-fade-up">

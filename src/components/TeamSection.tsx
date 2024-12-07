@@ -59,20 +59,21 @@ const TeamSection = () => {
         <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center text-tattoo-black">
           Meet Our <span className="text-tattoo-red">Artists</span>
         </h2>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {teamMembers.map((member) => (
-            <div
-              key={member.id}
-              className="group relative overflow-hidden rounded-lg bg-gradient-to-b from-white to-gray-50 shadow-xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="relative overflow-hidden rounded-t-lg p-6">
-                <div className="relative mb-8 aspect-square overflow-hidden rounded-lg">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+      
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        {teamMembers.map((member) => (
+          <div
+            key={member.id}
+            className="group relative overflow-hidden rounded-lg bg-gradient-to-b from-white to-gray-50 shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div className="relative overflow-hidden rounded-t-lg p-6">
+              <div className="relative mb-8 aspect-square overflow-hidden rounded-lg">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 
@@ -142,8 +143,8 @@ const TeamSection = () => {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
