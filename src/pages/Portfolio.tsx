@@ -12,7 +12,9 @@ const PortfolioPage = () => {
       </div>
       
       <main id="main-content" className="pt-20">
-        <Portfolio />
+        <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
+          <Portfolio />
+        </div>
       </main>
       
       <Footer />
