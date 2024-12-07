@@ -28,6 +28,10 @@ const Index = () => {
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <Services />
         </div>
+
+        <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
+          <InstagramFeed />
+        </div>
         
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <TeamSection />
@@ -35,10 +39,6 @@ const Index = () => {
         
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <Hours />
-        </div>
-
-        <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
-          <InstagramFeed />
         </div>
       </main>
       
