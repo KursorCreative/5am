@@ -89,10 +89,10 @@ const Hero = () => {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="left-8 bg-tattoo-black/80 text-white hover:bg-tattoo-red/90 w-16 h-16 transition-all duration-300 backdrop-blur-sm" aria-label="Previous slide">
+        <CarouselPrevious className="left-8 border-2 border-white bg-transparent text-white hover:bg-tattoo-red/90 hover:border-tattoo-red w-16 h-16 transition-all duration-300 backdrop-blur-sm" aria-label="Previous slide">
           <ChevronLeft className="w-10 h-10" aria-hidden="true" />
         </CarouselPrevious>
-        <CarouselNext className="right-8 bg-tattoo-black/80 text-white hover:bg-tattoo-red/90 w-16 h-16 transition-all duration-300 backdrop-blur-sm" aria-label="Next slide">
+        <CarouselNext className="right-8 border-2 border-white bg-transparent text-white hover:bg-tattoo-red/90 hover:border-tattoo-red w-16 h-16 transition-all duration-300 backdrop-blur-sm" aria-label="Next slide">
           <ChevronRight className="w-10 h-10" aria-hidden="true" />
         </CarouselNext>
       </Carousel>
