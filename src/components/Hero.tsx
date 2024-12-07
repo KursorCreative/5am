@@ -77,7 +77,7 @@ const Hero = () => {
                   Our skilled artists bring your vision to life.
                 </p>
                 <Button 
-                  className="bg-tattoo-red hover:bg-tattoo-red/90 text-white px-8 py-6 text-lg animate-fade-up"
+                  className="border-2 border-white bg-transparent hover:bg-tattoo-red/90 hover:border-tattoo-red text-white px-8 py-6 text-lg animate-fade-up transition-all duration-300"
                   onClick={() => window.location.href = '#contact'}
                   aria-label="Book your tattoo - Navigate to contact section"
                 >
