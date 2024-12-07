@@ -11,17 +11,19 @@ const Newsletter = () => {
     setIsLoading(true);
 
     try {
-      // Newsletter subscription logic here
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       toast({
         title: "Success!",
-        description: "You've been successfully subscribed to our newsletter."
+        description: "This is a demo form. In production, this would subscribe you to the newsletter."
       });
       setEmail("");
     } catch (error) {
       toast({
         variant: "destructive",
         title: "Error",
-        description: "Failed to subscribe. Please try again later."
+        description: "This is a demo form. No actual subscription is processed."
       });
     } finally {
       setIsLoading(false);

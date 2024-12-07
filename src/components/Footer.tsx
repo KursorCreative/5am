@@ -1,7 +1,7 @@
 import { ArrowUp } from "lucide-react";
 import SocialLinks from "./footer/SocialLinks";
-import Newsletter from "./footer/Newsletter";
 import ContactInfo from "./footer/ContactInfo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -33,18 +33,52 @@ const Footer = () => {
             <SocialLinks />
           </div>
           
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-gray-100">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link 
+                  to="/portfolio" 
+                  className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/privacy-policy" 
+                  className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/disclaimer" 
+                  className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
+                >
+                  Disclaimer
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
           <ContactInfo />
-          <Newsletter />
         </div>
         
-        <div className="mt-12 pt-8 border-t border-tattoo-gray text-center">
-          <p className="text-gray-300">&copy; 2024 5am Tattoo Studio. All rights reserved. | <a 
-            href="https://kursorcreative.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors underline decoration-tattoo-red/30 hover:decoration-tattoo-red"
-            aria-label="Visit Kursor Creative website (opens in new tab)"
-          >Site by Kursor Creative</a></p>
+        <div className="mt-12 pt-8 border-t border-tattoo-gray">
+          <p className="text-gray-300 text-center">
+            &copy; 2024 5am Tattoo Studio. All rights reserved. | 
+            <a 
+              href="https://kursorcreative.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors underline decoration-tattoo-red/30 hover:decoration-tattoo-red"
+              aria-label="Visit Kursor Creative website (opens in new tab)"
+            >
+              Site by Kursor Creative
+            </a>
+          </p>
         </div>
       </div>
     </footer>

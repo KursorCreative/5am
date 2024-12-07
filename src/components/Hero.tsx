@@ -77,7 +77,7 @@ const Hero = () => {
                   Our skilled artists bring your vision to life.
                 </p>
                 <Button 
-                  className="bg-tattoo-red hover:bg-tattoo-red/90 text-white px-8 py-6 text-lg animate-fade-up"
+                  className="border-2 border-white bg-transparent hover:bg-tattoo-red/90 hover:border-tattoo-red text-white px-8 py-6 text-lg animate-fade-up transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-lg hover:animate-subtle-shake"
                   onClick={() => window.location.href = '#contact'}
                   aria-label="Book your tattoo - Navigate to contact section"
                 >
@@ -89,12 +89,14 @@ const Hero = () => {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="left-8 bg-tattoo-black/80 text-white hover:bg-tattoo-red/90 w-16 h-16 transition-all duration-300 backdrop-blur-sm" aria-label="Previous slide">
-          <ChevronLeft className="w-10 h-10" aria-hidden="true" />
-        </CarouselPrevious>
-        <CarouselNext className="right-8 bg-tattoo-black/80 text-white hover:bg-tattoo-red/90 w-16 h-16 transition-all duration-300 backdrop-blur-sm" aria-label="Next slide">
-          <ChevronRight className="w-10 h-10" aria-hidden="true" />
-        </CarouselNext>
+        <div className="hidden md:block">
+          <CarouselPrevious className="left-8 border-2 border-white bg-transparent text-white hover:bg-tattoo-red/90 hover:border-tattoo-red w-16 h-16 transition-all duration-300 backdrop-blur-sm" aria-label="Previous slide">
+            <ChevronLeft className="w-10 h-10" aria-hidden="true" />
+          </CarouselPrevious>
+          <CarouselNext className="right-8 border-2 border-white bg-transparent text-white hover:bg-tattoo-red/90 hover:border-tattoo-red w-16 h-16 transition-all duration-300 backdrop-blur-sm" aria-label="Next slide">
+            <ChevronRight className="w-10 h-10" aria-hidden="true" />
+          </CarouselNext>
+        </div>
       </Carousel>
 
       {/* Scroll Mouse Icon */}
