@@ -67,7 +67,7 @@ const Hero = () => {
               </div>
               
               <div className="relative container h-full flex flex-col justify-center items-start py-4 md:py-8">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 animate-fade-up">
                   {image.caption}
                   <br />
                   <span className="text-tattoo-red">{image.subcaption}</span>
