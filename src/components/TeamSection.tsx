@@ -43,9 +43,17 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <section className="py-24 bg-tattoo-black">
-      <div className="container px-4 mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center text-tattoo-white">
+    <section className="py-24 bg-white relative">
+      {/* Pattern overlay */}
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      />
+      
+      <div className="container px-4 mx-auto relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center text-tattoo-black">
           Meet Our <span className="text-tattoo-red">Artists</span>
         </h2>
         
@@ -53,9 +61,9 @@ const TeamSection = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="group relative overflow-hidden rounded-lg bg-gradient-to-b from-tattoo-gray to-tattoo-black p-1"
+              className="group relative overflow-hidden rounded-lg bg-gradient-to-b from-white to-gray-50 shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="relative overflow-hidden rounded-lg bg-tattoo-black p-6">
+              <div className="relative overflow-hidden rounded-lg p-6">
                 <div className="relative mb-8 aspect-square overflow-hidden rounded-lg">
                   <img
                     src={member.image}
@@ -66,11 +74,11 @@ const TeamSection = () => {
                 </div>
                 
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bebas mb-1 text-tattoo-white group-hover:text-tattoo-red transition-colors">
+                  <h3 className="text-2xl font-bebas mb-1 text-tattoo-black group-hover:text-tattoo-red transition-colors">
                     {member.name}
                   </h3>
                   <p className="text-tattoo-red font-medium mb-4">{member.role}</p>
-                  <p className="text-gray-300 mb-6 text-sm">{member.bio}</p>
+                  <p className="text-gray-600 mb-6 text-sm">{member.bio}</p>
                   
                   <div className="flex gap-4 justify-center">
                     {member.social.instagram && (
