@@ -63,7 +63,12 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel className="text-tattoo-black">Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your name" {...field} className="bg-white border-tattoo-gray/20 rounded-md" />
+                    <Input 
+                      placeholder="Your name" 
+                      {...field} 
+                      className="bg-white border-tattoo-gray/20 rounded-md" 
+                      autoComplete="off"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -77,7 +82,12 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel className="text-tattoo-black">Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="your.email@example.com" {...field} className="bg-white border-tattoo-gray/20 rounded-md" />
+                    <Input 
+                      placeholder="your.email@example.com" 
+                      {...field} 
+                      className="bg-white border-tattoo-gray/20 rounded-md" 
+                      autoComplete="off"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -95,6 +105,7 @@ const ContactForm = () => {
                       placeholder="Write your message here..." 
                       className="min-h-[150px] bg-white border-tattoo-gray/20 rounded-md"
                       {...field} 
+                      autoComplete="off"
                     />
                   </FormControl>
                   <FormMessage />
