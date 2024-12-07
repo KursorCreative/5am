@@ -62,7 +62,6 @@ const Hero = () => {
                 style={{ backgroundImage: `url(${image.url})` }}
                 role="img"
                 aria-label={image.alt}
-                loading="lazy"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-tattoo-black to-tattoo-black/70" aria-hidden="true" />
               </div>
