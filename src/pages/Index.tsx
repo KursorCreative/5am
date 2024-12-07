@@ -6,6 +6,7 @@ import TeamSection from "@/components/TeamSection";
 import Hours from "@/components/Hours";
 import Footer from "@/components/Footer";
 import SkipToContent from "@/components/SkipToContent";
+import InstagramFeed from "@/components/InstagramFeed";
 
 const Index = () => {
   return (
@@ -34,6 +35,10 @@ const Index = () => {
         
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <Hours />
+        </div>
+
+        <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
+          <InstagramFeed />
         </div>
       </main>
       
