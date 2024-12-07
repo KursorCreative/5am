@@ -1,47 +1,5 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-
-const portfolioImages = [
-  {
-    id: 1,
-    src: "/IMG_6143.jpeg",
-    alt: "Detailed tattoo artwork showcasing intricate linework",
-    category: "Traditional",
-  },
-  {
-    id: 2,
-    src: "/IMG_7029.jpeg",
-    alt: "Neo-traditional style tattoo with bold colors",
-    category: "Neo-Traditional",
-  },
-  {
-    id: 3,
-    src: "/IMG_7799.jpeg",
-    alt: "Blackwork style tattoo with detailed patterns",
-    category: "Blackwork",
-  },
-  {
-    id: 4,
-    src: "/IMG_8939.jpeg",
-    alt: "Japanese inspired tattoo design",
-    category: "Japanese",
-  },
-  {
-    id: 5,
-    src: "/IMG_9410.jpeg",
-    alt: "Minimalist tattoo design",
-    category: "Minimalist",
-  },
-  {
-    id: 6,
-    src: "/IMG_9415.jpeg",
-    alt: "Watercolor style tattoo artwork",
-    category: "Watercolor",
-  },
-];
+import { portfolioImages } from "./portfolio/portfolioData";
+import PortfolioImage from "./portfolio/PortfolioImage";
 
 const Portfolio = () => {
   return (
@@ -61,37 +19,12 @@ const Portfolio = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
           {portfolioImages.map((image) => (
-            <Dialog key={image.id}>
-              <DialogTrigger asChild>
-                <div 
-                  className="relative group cursor-pointer overflow-hidden rounded-lg"
-                  role="listitem"
-                  tabIndex={0}
-                  aria-label={`View ${image.category} tattoo design`}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-tattoo-black/80 via-tattoo-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                    <span className="text-white text-lg font-semibold tracking-wider">
-                      {image.category}
-                    </span>
-                  </div>
-                </div>
-              </DialogTrigger>
-              <DialogContent 
-                className="max-w-3xl bg-white border-tattoo-red"
-                aria-label={`${image.category} tattoo design - enlarged view`}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-auto max-h-[80vh] object-contain"
-                />
-              </DialogContent>
-            </Dialog>
+            <PortfolioImage
+              key={image.id}
+              src={image.src}
+              alt={image.alt}
+              category={image.category}
+            />
           ))}
         </div>
       </div>
