@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import SkipToContent from "@/components/SkipToContent";
+import TeamSection from "@/components/TeamSection";
 
 const AboutPage = () => {
   return (
@@ -13,6 +14,7 @@ const AboutPage = () => {
       
       <main id="main-content" className="pt-20">
         <About />
+        <TeamSection />
       </main>
       
       <Footer />
