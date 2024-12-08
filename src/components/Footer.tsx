@@ -46,6 +46,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
+                  to="/accessibility" 
+                  className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
+                >
+                  Accessibility
+                </Link>
+              </li>
+              <li>
+                <Link 
                   to="/privacy-policy" 
                   className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 p-1 rounded transition-colors"
                 >

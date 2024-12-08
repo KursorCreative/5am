@@ -13,6 +13,7 @@ const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Contact = lazy(() => import("./pages/Contact"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
+const Accessibility = lazy(() => import("./pages/Accessibility"));
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/accessibility" element={<Accessibility />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
