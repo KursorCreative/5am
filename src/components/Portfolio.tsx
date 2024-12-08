@@ -15,7 +15,7 @@ const Portfolio = () => {
       <div className="container">
         <h2 
           id="portfolio-heading"
-          className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-black"
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-black leading-tight"
         >
           Our <span className="text-tattoo-red">Portfolio</span>
         </h2>

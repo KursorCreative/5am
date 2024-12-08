@@ -46,8 +46,10 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <section className="py-24 bg-white relative">
-      {/* Pattern overlay with adjusted opacity */}
+    <section 
+      className="py-24 bg-white relative" 
+      aria-labelledby="team-heading"
+    >
       <div 
         className="absolute inset-0 opacity-5"
         style={{
@@ -56,21 +58,29 @@ const TeamSection = () => {
       />
       
       <div className="container px-4 mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center text-tattoo-black">
+        <h2 
+          id="team-heading" 
+          className="text-4xl md:text-5xl font-bebas mb-16 text-center text-tattoo-black leading-tight"
+        >
           Meet Our <span className="text-tattoo-red">Artists</span>
         </h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div 
+          className="grid grid-cols-1 lg:grid-cols-3 gap-12"
+          role="list"
+          aria-label="Team members"
+        >
           {teamMembers.map((member) => (
             <div
               key={member.id}
               className="group relative overflow-hidden rounded-lg bg-gradient-to-b from-white to-gray-50 shadow-xl transition-all duration-300 hover:-translate-y-2"
+              role="listitem"
             >
               <div className="relative overflow-hidden rounded-t-lg p-6">
                 <div className="relative mb-8 aspect-square overflow-hidden rounded-lg">
                   <img
                     src={member.image}
-                    alt={member.name}
+                    alt={`${member.name}, ${member.role}`}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
@@ -82,15 +92,15 @@ const TeamSection = () => {
                     {member.name}
                   </h3>
                   <p className="text-tattoo-red font-medium mb-4">{member.role}</p>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{member.bio}</p>
+                  <p className="text-gray-600 mb-6 text-base leading-relaxed">{member.bio}</p>
                   
                   <div className="mb-6">
-                    <h4 className="text-sm font-bold text-tattoo-black mb-2">Specialties:</h4>
+                    <h4 className="text-base font-bold text-tattoo-black mb-2">Specialties:</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.specialties.map((specialty, index) => (
                         <span
                           key={index}
-                          className="text-xs px-3 py-1 rounded-full bg-tattoo-red/10 text-tattoo-red"
+                          className="text-sm px-3 py-1 rounded-full bg-tattoo-red/10 text-tattoo-red"
                         >
                           {specialty}
                         </span>
@@ -98,15 +108,20 @@ const TeamSection = () => {
                     </div>
                   </div>
                   
-                  <div className="flex gap-4 justify-center">
+                  <div 
+                    className="flex gap-4 justify-center"
+                    role="list"
+                    aria-label={`${member.name}'s social media links`}
+                  >
                     {member.social.instagram && (
                       <a
                         href={member.social.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-tattoo-red transition-colors"
+                        className="text-gray-400 hover:text-tattoo-red transition-colors focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 rounded-full p-1"
+                        aria-label={`Follow ${member.name} on Instagram`}
                       >
-                        <Instagram className="w-5 h-5" />
+                        <Instagram className="w-5 h-5" aria-hidden="true" />
                       </a>
                     )}
                     {member.social.facebook && (
@@ -114,9 +129,10 @@ const TeamSection = () => {
                         href={member.social.facebook}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-tattoo-red transition-colors"
+                        className="text-gray-400 hover:text-tattoo-red transition-colors focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 rounded-full p-1"
+                        aria-label={`Follow ${member.name} on Facebook`}
                       >
-                        <Facebook className="w-5 h-5" />
+                        <Facebook className="w-5 h-5" aria-hidden="true" />
                       </a>
                     )}
                     {member.social.twitter && (
@@ -124,9 +140,10 @@ const TeamSection = () => {
                         href={member.social.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-tattoo-red transition-colors"
+                        className="text-gray-400 hover:text-tattoo-red transition-colors focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 rounded-full p-1"
+                        aria-label={`Follow ${member.name} on Twitter`}
                       >
-                        <Twitter className="w-5 h-5" />
+                        <Twitter className="w-5 h-5" aria-hidden="true" />
                       </a>
                     )}
                     {member.social.linkedin && (
@@ -134,9 +151,10 @@ const TeamSection = () => {
                         href={member.social.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-tattoo-red transition-colors"
+                        className="text-gray-400 hover:text-tattoo-red transition-colors focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 rounded-full p-1"
+                        aria-label={`Connect with ${member.name} on LinkedIn`}
                       >
-                        <Linkedin className="w-5 h-5" />
+                        <Linkedin className="w-5 h-5" aria-hidden="true" />
                       </a>
                     )}
                   </div>

@@ -42,7 +42,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-16 bg-white relative">
+    <section className="py-16 bg-white relative" aria-labelledby="contact-form-heading">
       <div 
         className="absolute inset-0 opacity-5 pointer-events-none"
         style={{
@@ -50,27 +50,35 @@ const ContactForm = () => {
         }}
       />
       <div className="container mx-auto px-4 max-w-2xl relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bebas text-center mb-8 text-tattoo-black">
+        <h2 
+          id="contact-form-heading" 
+          className="text-4xl md:text-5xl font-bebas text-center mb-8 text-tattoo-black leading-tight"
+        >
           Send Us a Message
         </h2>
         
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form 
+            onSubmit={form.handleSubmit(onSubmit)} 
+            className="space-y-6"
+            noValidate
+          >
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-tattoo-black">Name</FormLabel>
+                  <FormLabel className="text-tattoo-black text-lg">Name</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="Your name" 
                       {...field} 
-                      className="bg-white border-tattoo-gray/20 rounded-md" 
-                      autoComplete="off"
+                      className="bg-white border-tattoo-gray/20 rounded-md text-base leading-relaxed" 
+                      autoComplete="name"
+                      aria-required="true"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage role="alert" />
                 </FormItem>
               )}
             />
@@ -80,16 +88,18 @@ const ContactForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-tattoo-black">Email</FormLabel>
+                  <FormLabel className="text-tattoo-black text-lg">Email</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="your.email@example.com" 
                       {...field} 
-                      className="bg-white border-tattoo-gray/20 rounded-md" 
-                      autoComplete="off"
+                      className="bg-white border-tattoo-gray/20 rounded-md text-base leading-relaxed" 
+                      autoComplete="email"
+                      type="email"
+                      aria-required="true"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage role="alert" />
                 </FormItem>
               )}
             />
@@ -99,24 +109,25 @@ const ContactForm = () => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-tattoo-black">Message</FormLabel>
+                  <FormLabel className="text-tattoo-black text-lg">Message</FormLabel>
                   <FormControl>
                     <Textarea 
                       placeholder="Write your message here..." 
-                      className="min-h-[150px] bg-white border-tattoo-gray/20 rounded-md"
+                      className="min-h-[150px] bg-white border-tattoo-gray/20 rounded-md text-base leading-relaxed"
                       {...field} 
-                      autoComplete="off"
+                      aria-required="true"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage role="alert" />
                 </FormItem>
               )}
             />
 
             <Button 
               type="submit" 
-              className="w-full bg-tattoo-red hover:bg-tattoo-red/90"
+              className="w-full bg-tattoo-red hover:bg-tattoo-red/90 text-lg py-6"
               disabled={form.formState.isSubmitting}
+              aria-label={form.formState.isSubmitting ? "Sending message..." : "Send message"}
             >
               {form.formState.isSubmitting ? "Sending..." : "Send Message"}
             </Button>

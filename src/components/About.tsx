@@ -14,7 +14,7 @@ const About = () => {
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1542382257-80dedb725088"
-              alt="Tattoo artist working in our professional studio environment"
+              alt="Professional tattoo artist working in our studio"
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
@@ -22,7 +22,7 @@ const About = () => {
           <div className="space-y-6 animate-fade-up">
             <h2 
               id="about-heading" 
-              className="text-3xl md:text-4xl font-bold text-tattoo-black"
+              className="text-3xl md:text-4xl font-bold text-tattoo-black leading-tight"
             >
               About <span className="text-tattoo-red">5am</span>
             </h2>

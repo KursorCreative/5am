@@ -42,7 +42,7 @@ const Services = () => {
       <div className="container">
         <h2 
           id="services-heading" 
-          className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-black"
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-black leading-tight"
         >
           Our <span className="text-tattoo-red">Services</span>
         </h2>
@@ -54,8 +54,9 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.title}
-              className="p-6 bg-white rounded-lg hover:neon-border transition-all duration-300"
+              className="p-6 bg-white rounded-lg hover:neon-border transition-all duration-300 focus-within:ring-2 focus-within:ring-tattoo-red focus-within:ring-offset-2"
               role="listitem"
+              tabIndex={0}
             >
               {service.isLocalIcon ? (
                 <img 
@@ -74,7 +75,7 @@ const Services = () => {
               <h3 className="text-xl font-bold mb-2 text-tattoo-black leading-relaxed">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-base">
                 {service.description}
               </p>
             </div>
