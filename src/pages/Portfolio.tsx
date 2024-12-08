@@ -19,12 +19,20 @@ const PortfolioPage = () => {
         (mod) => mod.portfolioImages
       );
       images.forEach((image) => {
-        const img = new Image();
-        img.src = image.src;
+        queryClient.prefetchQuery({
+          queryKey: ['portfolioImage', image.id],
+          queryFn: () => new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = image.src;
+            img.onload = () => resolve(image.src);
+            img.onerror = () => reject(new Error(`Failed to load image ${image.id}`));
+          }),
+          staleTime: Infinity,
+        });
       });
     };
     prefetchImages();
-  }, []);
+  }, [queryClient]);
 
   // Add structured data for SEO
   useEffect(() => {

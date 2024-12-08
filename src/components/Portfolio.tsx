@@ -1,37 +1,7 @@
-import { useEffect, useCallback } from "react";
-import { useQueryClient } from "@tanstack/react-query";
-import { portfolioImages } from "./portfolio/portfolioData";
+import { memo } from "react";
 import PortfolioGrid from "./portfolio/PortfolioGrid";
-import { toast } from "sonner";
 
-const Portfolio = () => {
-  const queryClient = useQueryClient();
-
-  const prefetchImages = useCallback(() => {
-    portfolioImages.forEach((image) => {
-      queryClient.prefetchQuery({
-        queryKey: ['portfolioImage', image.id],
-        queryFn: () => new Promise<string>((resolve, reject) => {
-          const img = new Image();
-          img.src = image.src;
-          img.onload = () => {
-            toast.success(`Image ${image.id} loaded successfully`);
-            resolve(image.src);
-          };
-          img.onerror = () => {
-            toast.error(`Failed to load image ${image.id}`);
-            reject(new Error(`Failed to load image ${image.id}`));
-          };
-        }),
-        staleTime: Infinity,
-      });
-    });
-  }, [queryClient]);
-
-  useEffect(() => {
-    prefetchImages();
-  }, [prefetchImages]);
-
+const Portfolio = memo(() => {
   return (
     <section 
       id="portfolio" 
@@ -54,6 +24,8 @@ const Portfolio = () => {
       </div>
     </section>
   );
-};
+});
+
+Portfolio.displayName = 'Portfolio';
 
 export default Portfolio;
