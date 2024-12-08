@@ -1,11 +1,13 @@
 import { useInView } from "react-intersection-observer";
 import PortfolioImage from "./PortfolioImage";
 import { portfolioImages } from "./portfolioData";
+import { memo } from "react";
 
-const PortfolioGrid = () => {
+const PortfolioGrid = memo(() => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: '50px'
   });
 
   return (
@@ -27,6 +29,8 @@ const PortfolioGrid = () => {
       ))}
     </div>
   );
-};
+});
+
+PortfolioGrid.displayName = 'PortfolioGrid';
 
 export default PortfolioGrid;

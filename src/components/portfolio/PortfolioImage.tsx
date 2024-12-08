@@ -13,7 +13,8 @@ const PortfolioImage = memo(({ src, alt, category }: PortfolioImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: '100px'
   });
 
   const handleImageLoad = () => {
@@ -23,7 +24,7 @@ const PortfolioImage = memo(({ src, alt, category }: PortfolioImageProps) => {
   return (
     <PortfolioImageDialog src={src} alt={alt}>
       <div 
-        className="relative group cursor-pointer overflow-hidden rounded-lg"
+        className="relative group cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105"
         role="listitem"
         tabIndex={0}
         aria-label={`View ${category} tattoo design`}
@@ -37,7 +38,9 @@ const PortfolioImage = memo(({ src, alt, category }: PortfolioImageProps) => {
               onLoad={handleImageLoad} 
             />
             <div 
-              className="absolute inset-0 bg-gradient-to-t from-tattoo-black/80 via-tattoo-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6"
+              className={`absolute inset-0 bg-gradient-to-t from-tattoo-black/80 via-tattoo-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 ${
+                isLoaded ? 'pointer-events-auto' : 'pointer-events-none'
+              }`}
               aria-hidden="true"
             >
               <span className="text-white text-lg font-semibold tracking-wider">

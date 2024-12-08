@@ -12,22 +12,24 @@ const PortfolioImageLoader = ({ src, alt, onLoad }: PortfolioImageLoaderProps) =
 
   const { data: imageSrc } = useQuery({
     queryKey: ['portfolioImage', src],
-    queryFn: () => new Promise((resolve) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = () => {
-        setIsLoaded(true);
-        onLoad();
-        resolve(src);
-      };
-    }),
+    queryFn: async () => {
+      return new Promise<string>((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          setIsLoaded(true);
+          onLoad();
+          resolve(src);
+        };
+      });
+    },
     staleTime: Infinity,
   });
 
   if (!imageSrc) {
     return (
       <div 
-        className="w-full h-64 bg-tattoo-gray/20"
+        className="w-full h-64 bg-tattoo-gray/20 animate-pulse"
         aria-hidden="true"
       />
     );

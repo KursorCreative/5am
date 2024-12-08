@@ -6,12 +6,11 @@ import PortfolioGrid from "./portfolio/PortfolioGrid";
 const Portfolio = () => {
   const queryClient = useQueryClient();
 
-  // Prefetch next batch of images
-  useEffect(() => {
+  const prefetchImages = useCallback(() => {
     portfolioImages.forEach((image) => {
       queryClient.prefetchQuery({
         queryKey: ['portfolioImage', image.id],
-        queryFn: () => new Promise((resolve) => {
+        queryFn: () => new Promise<string>((resolve) => {
           const img = new Image();
           img.src = image.src;
           img.onload = () => resolve(image.src);
@@ -20,6 +19,10 @@ const Portfolio = () => {
       });
     });
   }, [queryClient]);
+
+  useEffect(() => {
+    prefetchImages();
+  }, [prefetchImages]);
 
   return (
     <section 
