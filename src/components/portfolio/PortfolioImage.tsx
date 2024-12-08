@@ -2,7 +2,6 @@ import { useState, memo, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 import PortfolioImageDialog from "./PortfolioImageDialog";
 import PortfolioImageLoader from "./PortfolioImageLoader";
-import { toast } from "sonner";
 
 interface PortfolioImageProps {
   src: string;
@@ -20,11 +19,10 @@ const PortfolioImage = memo(({ src, alt, category }: PortfolioImageProps) => {
 
   const handleImageLoad = useCallback(() => {
     setIsLoaded(true);
-    toast.success(`${category} image loaded successfully`);
-  }, [category]);
+  }, []);
 
   const handleImageError = useCallback(() => {
-    toast.error(`Failed to load ${category} image`);
+    console.error(`Failed to load ${category} image`);
   }, [category]);
 
   return (
