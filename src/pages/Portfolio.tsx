@@ -1,10 +1,35 @@
+import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Portfolio from "@/components/Portfolio";
 import Footer from "@/components/Footer";
 import SkipToContent from "@/components/SkipToContent";
 import PageHero from "@/components/PageHero";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import ScrollProgress from "@/components/ScrollProgress";
+import CookieConsent from "@/components/CookieConsent";
 
 const PortfolioPage = () => {
+  // Add structured data for SEO
+  useEffect(() => {
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Portfolio - 5am Tattoo Studio",
+      "description": "View our collection of custom tattoo designs and artwork at 5am Tattoo Studio.",
+      "image": "https://example.com/portfolio-image.jpg",
+      "url": "https://5amtattoo.com/portfolio"
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   const breadcrumbs = [
     {
       label: "Portfolio",
@@ -15,6 +40,7 @@ const PortfolioPage = () => {
   return (
     <div className="min-h-screen bg-tattoo-black text-white">
       <SkipToContent />
+      <ScrollProgress />
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
@@ -22,11 +48,14 @@ const PortfolioPage = () => {
       <main id="main-content" className="pt-20">
         <PageHero title="Our Work" breadcrumbs={breadcrumbs} />
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
-          <Portfolio />
+          <Suspense fallback={<LoadingSpinner />}>
+            <Portfolio />
+          </Suspense>
         </div>
       </main>
       
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
