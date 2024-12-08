@@ -1,15 +1,15 @@
-import { Paintbrush, WandSparkles, Clock, Users } from "lucide-react";
-
 const services = [
   {
-    icon: Paintbrush,
+    icon: "/tattoo.png",
     title: "Custom Designs",
     description: "Unique tattoos tailored to your vision and style.",
+    isLocalIcon: true
   },
   {
-    icon: WandSparkles,
+    icon: "/tattoo-gun.png",
     title: "Professional Equipment",
     description: "Top-quality, sterilized equipment for your safety.",
+    isLocalIcon: true
   },
   {
     icon: Clock,
@@ -37,7 +37,16 @@ const Services = () => {
               key={service.title}
               className="p-6 bg-white rounded-lg hover:neon-border transition-all duration-300"
             >
-              <service.icon className="w-12 h-12 text-tattoo-red mb-4" />
+              {service.isLocalIcon ? (
+                <img 
+                  src={service.icon} 
+                  alt="" 
+                  className="w-12 h-12 mb-4"
+                  aria-hidden="true"
+                />
+              ) : (
+                <service.icon className="w-12 h-12 text-tattoo-red mb-4" />
+              )}
               <h3 className="text-xl font-bold mb-2 text-tattoo-black">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
             </div>
