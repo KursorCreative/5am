@@ -4,8 +4,16 @@ import Footer from "@/components/Footer";
 import SkipToContent from "@/components/SkipToContent";
 import ContactInfo from "@/components/contact/ContactInfo";
 import ContactForm from "@/components/contact/ContactForm";
+import PageHero from "@/components/PageHero";
 
 const ContactPage = () => {
+  const breadcrumbs = [
+    {
+      label: "Contact",
+      path: "/contact"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-tattoo-black text-white">
       <SkipToContent />
@@ -14,6 +22,7 @@ const ContactPage = () => {
       </div>
       
       <main id="main-content" className="pt-20">
+        <PageHero title="Get in Touch" breadcrumbs={breadcrumbs} />
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <ContactInfo />
         </div>
