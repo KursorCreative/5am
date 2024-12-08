@@ -8,13 +8,20 @@ const CookieConsent = () => {
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
+    const consentTimestamp = localStorage.getItem("cookieConsentTimestamp");
+    const currentTime = new Date().getTime();
+    const sevenDays = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+
+    if (!consent || (consentTimestamp && currentTime - parseInt(consentTimestamp) > sevenDays)) {
       setIsVisible(true);
+      localStorage.removeItem("cookieConsent");
+      localStorage.removeItem("cookieConsentTimestamp");
     }
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem("cookieConsent", "accepted");
+    localStorage.setItem("cookieConsentTimestamp", new Date().getTime().toString());
     setIsVisible(false);
   };
 
