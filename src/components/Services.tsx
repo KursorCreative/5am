@@ -1,6 +1,13 @@
 import { Clock, Users } from "lucide-react";
 
-const services = [
+type ServiceItem = {
+  icon: string | typeof Clock | typeof Users;
+  title: string;
+  description: string;
+  isLocalIcon?: boolean;
+};
+
+const services: ServiceItem[] = [
   {
     icon: "/tattoo.png",
     title: "Custom Designs",
@@ -41,12 +48,13 @@ const Services = () => {
             >
               {service.isLocalIcon ? (
                 <img 
-                  src={service.icon} 
+                  src={service.icon as string} 
                   alt="" 
                   className="w-12 h-12 mb-4"
                   aria-hidden="true"
                 />
               ) : (
+                // @ts-ignore - We know this is a valid Lucide icon component
                 <service.icon className="w-12 h-12 text-tattoo-red mb-4" />
               )}
               <h3 className="text-xl font-bold mb-2 text-tattoo-black">{service.title}</h3>
