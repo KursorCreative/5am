@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +28,14 @@ const CookieConsent = () => {
     >
       <div className="container mx-auto flex items-center justify-between gap-4">
         <p className="text-white text-sm md:text-base">
-          We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+          We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.{" "}
+          <Link 
+            to="/privacy-policy" 
+            className="text-tattoo-red hover:text-tattoo-red/80 underline focus:outline-none focus:ring-2 focus:ring-tattoo-red focus:ring-offset-2 rounded"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Read our Privacy Policy
+          </Link>
         </p>
         <div className="flex items-center gap-2">
           <Button
