@@ -12,9 +12,9 @@ export const carouselImages = [
     alt: "Tattoo artist working on a client's arm"
   },
   {
-    url: "https://images.unsplash.com/photo-1611501275019-9c50f64741d8",
+    url: "https://images.unsplash.com/photo-1598368195835-91e67f80c9d7",
     caption: "Custom",
     subcaption: "Designs",
-    alt: "Close-up of intricate tattoo design on skin"
+    alt: "Close-up of detailed custom tattoo design on skin"
   },
 ];
