@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1590246814883-55516d74fec6",
+    url: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28",
     caption: "Welcome to",
     subcaption: "5am Tattoo Studio",
-    alt: "Close-up of detailed black and grey tattoo artwork"
+    alt: "Professional tattoo artist working in studio"
   },
   {
     url: "https://images.unsplash.com/photo-1542382257-80dedb725088",
@@ -17,10 +17,10 @@ const images = [
     alt: "Tattoo artist working on a client's arm"
   },
   {
-    url: "https://images.unsplash.com/photo-1612459284970-e8f027596582",
+    url: "https://images.unsplash.com/photo-1611501275019-9c50f64741d8",
     caption: "Custom",
     subcaption: "Designs",
-    alt: "Detailed colorful tattoo design on skin"
+    alt: "Close-up of intricate tattoo design on skin"
   },
 ];
 
