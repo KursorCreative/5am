@@ -15,7 +15,18 @@ const AboutPage = () => {
       "@type": "AboutPage",
       "name": "About - 5am Tattoo Studio",
       "description": "Learn about our talented artists and the story behind 5am Tattoo Studio.",
-      "url": "https://5amtattoo.com/about"
+      "url": "https://5amtattoo.com/about",
+      "mainEntity": {
+        "@type": "TattooShop",
+        "name": "5am Tattoo Studio",
+        "description": "Premium tattoo studio specializing in custom designs and professional service.",
+        "image": "https://example.com/studio-image.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kaiapoi",
+          "addressCountry": "NZ"
+        }
+      }
     };
 
     const script = document.createElement('script');
@@ -44,7 +55,11 @@ const AboutPage = () => {
       </div>
       
       <main id="main-content" className="pt-20">
-        <PageHero title="About Us" breadcrumbs={breadcrumbs} />
+        <PageHero 
+          title="About Us" 
+          breadcrumbs={breadcrumbs}
+          description="Learn about our talented artists and the story behind 5am Tattoo Studio"
+        />
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <About />
         </div>
