@@ -1,3 +1,5 @@
+import { Clock, Users } from "lucide-react";
+
 const services = [
   {
     icon: "/tattoo.png",
