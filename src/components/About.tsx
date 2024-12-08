@@ -16,10 +16,6 @@ const About = () => {
         inView ? "opacity-100" : "opacity-0"
       )}
       aria-labelledby="about-heading"
-      style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        backgroundRepeat: 'repeat',
-      }}
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -30,7 +26,10 @@ const About = () => {
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-tattoo-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div 
+              className="absolute inset-0 bg-gradient-to-t from-tattoo-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+              aria-hidden="true"
+            />
           </div>
           <div className="space-y-6 animate-fade-up">
             <h2 
