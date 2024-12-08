@@ -4,10 +4,6 @@ const ContactInfo = () => {
   return (
     <section className="py-16 bg-tattoo-gray/20">
       <div className="container mx-auto px-4">
-        <h1 className="text-5xl md:text-6xl font-bebas text-center mb-12">
-          Get in Touch
-        </h1>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {/* Email */}
           <div className="bg-tattoo-gray/30 p-6 rounded-lg hover:bg-tattoo-gray/40 transition-colors group">
