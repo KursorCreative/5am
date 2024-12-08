@@ -4,11 +4,28 @@ import Portfolio from "@/components/Portfolio";
 import Footer from "@/components/Footer";
 import SkipToContent from "@/components/SkipToContent";
 import PageHero from "@/components/PageHero";
-import LoadingSpinner from "@/components/LoadingSpinner";
 import ScrollProgress from "@/components/ScrollProgress";
 import CookieConsent from "@/components/CookieConsent";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import { useQueryClient } from "@tanstack/react-query";
 
 const PortfolioPage = () => {
+  const queryClient = useQueryClient();
+
+  // Prefetch portfolio images
+  useEffect(() => {
+    const prefetchImages = async () => {
+      const images = await import("@/components/portfolio/portfolioData").then(
+        (mod) => mod.portfolioImages
+      );
+      images.forEach((image) => {
+        const img = new Image();
+        img.src = image.src;
+      });
+    };
+    prefetchImages();
+  }, []);
+
   // Add structured data for SEO
   useEffect(() => {
     const structuredData = {

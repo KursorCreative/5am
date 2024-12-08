@@ -1,13 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { portfolioImages } from "./portfolio/portfolioData";
 import PortfolioImage from "./portfolio/PortfolioImage";
 import { useInView } from "react-intersection-observer";
+import { useQueryClient } from "@tanstack/react-query";
 
 const Portfolio = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
+
+  const queryClient = useQueryClient();
+
+  // Implement virtual scrolling for large image sets
+  const loadImages = useCallback(() => {
+    return portfolioImages.map((image) => ({
+      ...image,
+      loaded: false
+    }));
+  }, []);
+
+  // Prefetch next batch of images
+  useEffect(() => {
+    if (inView) {
+      portfolioImages.forEach((image) => {
+        queryClient.prefetchQuery({
+          queryKey: ['portfolioImage', image.id],
+          queryFn: () => new Promise((resolve) => {
+            const img = new Image();
+            img.src = image.src;
+            img.onload = () => resolve(image.src);
+          }),
+          staleTime: Infinity,
+        });
+      });
+    }
+  }, [inView, queryClient]);
 
   return (
     <section 
@@ -35,7 +63,7 @@ const Portfolio = () => {
           role="list"
           aria-label="Portfolio gallery"
         >
-          {portfolioImages.map((image) => (
+          {loadImages().map((image) => (
             <PortfolioImage
               key={image.id}
               src={image.src}
