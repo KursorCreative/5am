@@ -64,10 +64,11 @@ const InstagramFeed = () => {
           <Button
             variant="outline"
             className="bg-transparent border-2 border-tattoo-red hover:bg-tattoo-red text-white px-6 py-2 rounded-none transition-all duration-300"
-            onClick={() => window.open('https://instagram.com/5amtattoo', '_blank')}
+            onClick={() => window.open('https://instagram.com/5amtattoostudios', '_blank')}
+            aria-label="Follow us on Instagram"
           >
             <Instagram className="mr-2 h-5 w-5" />
-            Follow @5amtattoo
+            Follow @5amtattoostudios
           </Button>
         </div>
 
