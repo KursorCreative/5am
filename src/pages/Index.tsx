@@ -12,7 +12,6 @@ import ScrollProgress from "@/components/ScrollProgress";
 import CookieConsent from "@/components/CookieConsent";
 
 const Index = () => {
-  // Add structured data for SEO
   useEffect(() => {
     const structuredData = {
       "@context": "https://schema.org",
@@ -39,14 +38,21 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-tattoo-black text-white">
+    <div 
+      className="min-h-screen bg-tattoo-black text-white"
+      role="document"
+    >
       <SkipToContent />
       <ScrollProgress />
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
       
-      <main id="main-content">
+      <main 
+        id="main-content"
+        role="main"
+        aria-label="Main content"
+      >
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <Hero />
         </div>

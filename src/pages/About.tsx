@@ -47,14 +47,22 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-tattoo-black text-white">
+    <div 
+      className="min-h-screen bg-tattoo-black text-white"
+      role="document"
+    >
       <SkipToContent />
       <ScrollProgress />
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
       
-      <main id="main-content" className="pt-20">
+      <main 
+        id="main-content"
+        className="pt-20"
+        role="main"
+        aria-label="About us content"
+      >
         <PageHero 
           title="About Us" 
           breadcrumbs={breadcrumbs}

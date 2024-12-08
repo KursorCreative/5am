@@ -12,7 +12,6 @@ import { useQueryClient } from "@tanstack/react-query";
 const PortfolioPage = () => {
   const queryClient = useQueryClient();
 
-  // Prefetch portfolio images
   useEffect(() => {
     const prefetchImages = async () => {
       const images = await import("@/components/portfolio/portfolioData").then(
@@ -34,7 +33,6 @@ const PortfolioPage = () => {
     prefetchImages();
   }, [queryClient]);
 
-  // Add structured data for SEO
   useEffect(() => {
     const structuredData = {
       "@context": "https://schema.org",
@@ -63,17 +61,33 @@ const PortfolioPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-tattoo-black text-white">
+    <div 
+      className="min-h-screen bg-tattoo-black text-white"
+      role="document"
+    >
       <SkipToContent />
       <ScrollProgress />
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
       
-      <main id="main-content" className="pt-20">
-        <PageHero title="Our Work" breadcrumbs={breadcrumbs} />
+      <main 
+        id="main-content" 
+        className="pt-20"
+        role="main"
+        aria-label="Portfolio gallery"
+      >
+        <PageHero 
+          title="Our Work" 
+          breadcrumbs={breadcrumbs}
+          description="Explore our diverse collection of custom tattoo designs and artwork"
+        />
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={
+            <div className="min-h-[400px] flex items-center justify-center">
+              <LoadingSpinner />
+            </div>
+          }>
             <Portfolio />
           </Suspense>
         </div>

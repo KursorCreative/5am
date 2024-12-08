@@ -34,14 +34,22 @@ const Disclaimer = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-tattoo-black">
+    <div 
+      className="min-h-screen bg-tattoo-black"
+      role="document"
+    >
       <SkipToContent />
       <ScrollProgress />
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
       
-      <main id="main-content" className="pt-20">
+      <main 
+        id="main-content" 
+        className="pt-20"
+        role="main"
+        aria-label="Disclaimer content"
+      >
         <PageHero title="Disclaimer" breadcrumbs={breadcrumbs} />
         <div 
           className="bg-white relative"
@@ -54,23 +62,29 @@ const Disclaimer = () => {
             <div className="prose max-w-none">
               <p className="mb-4 text-tattoo-black">Last updated: {new Date().toLocaleDateString()}</p>
               
-              <h2 className="text-2xl font-bold mt-8 mb-4 text-tattoo-black">1. Professional Service</h2>
-              <p className="mb-4 text-tattoo-black">
-                While we strive to provide the highest quality tattoo services, results may vary
-                based on individual skin types, aftercare, and other factors.
-              </p>
+              <section aria-labelledby="professional-service">
+                <h2 id="professional-service" className="text-2xl font-bold mt-8 mb-4 text-tattoo-black">1. Professional Service</h2>
+                <p className="mb-4 text-tattoo-black">
+                  While we strive to provide the highest quality tattoo services, results may vary
+                  based on individual skin types, aftercare, and other factors.
+                </p>
+              </section>
               
-              <h2 className="text-2xl font-bold mt-8 mb-4 text-tattoo-black">2. Health Considerations</h2>
-              <p className="mb-4 text-tattoo-black">
-                Tattoos involve inherent risks. Clients must disclose any relevant health conditions
-                and follow all provided aftercare instructions.
-              </p>
+              <section aria-labelledby="health-considerations">
+                <h2 id="health-considerations" className="text-2xl font-bold mt-8 mb-4 text-tattoo-black">2. Health Considerations</h2>
+                <p className="mb-4 text-tattoo-black">
+                  Tattoos involve inherent risks. Clients must disclose any relevant health conditions
+                  and follow all provided aftercare instructions.
+                </p>
+              </section>
               
-              <h2 className="text-2xl font-bold mt-8 mb-4 text-tattoo-black">3. Content Accuracy</h2>
-              <p className="mb-4 text-tattoo-black">
-                While we make every effort to ensure the accuracy of information on our website,
-                we cannot guarantee that all information is complete or current.
-              </p>
+              <section aria-labelledby="content-accuracy">
+                <h2 id="content-accuracy" className="text-2xl font-bold mt-8 mb-4 text-tattoo-black">3. Content Accuracy</h2>
+                <p className="mb-4 text-tattoo-black">
+                  While we make every effort to ensure the accuracy of information on our website,
+                  we cannot guarantee that all information is complete or current.
+                </p>
+              </section>
             </div>
           </div>
         </div>

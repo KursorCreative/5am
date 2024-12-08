@@ -37,22 +37,38 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-tattoo-black text-white">
+    <div 
+      className="min-h-screen bg-tattoo-black text-white"
+      role="document"
+    >
       <SkipToContent />
       <ScrollProgress />
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
       
-      <main id="main-content" className="pt-20">
-        <PageHero title="Get in Touch" breadcrumbs={breadcrumbs} />
+      <main 
+        id="main-content" 
+        className="pt-20"
+        role="main"
+        aria-label="Contact information and form"
+      >
+        <PageHero 
+          title="Get in Touch" 
+          breadcrumbs={breadcrumbs}
+          description="Contact us to book your appointment or ask any questions about our services"
+        />
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <ContactInfo />
         </div>
         <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
           <ContactForm />
         </div>
-        <div className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none">
+        <div 
+          className="relative w-full lg:w-[100vw] lg:left-[calc(-50vw+50%)] max-w-none"
+          role="complementary"
+          aria-label="Studio location map"
+        >
           <Maps />
         </div>
       </main>
