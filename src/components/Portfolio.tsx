@@ -2,6 +2,7 @@ import { useEffect, useCallback } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { portfolioImages } from "./portfolio/portfolioData";
 import PortfolioGrid from "./portfolio/PortfolioGrid";
+import { toast } from "sonner";
 
 const Portfolio = () => {
   const queryClient = useQueryClient();
@@ -10,10 +11,17 @@ const Portfolio = () => {
     portfolioImages.forEach((image) => {
       queryClient.prefetchQuery({
         queryKey: ['portfolioImage', image.id],
-        queryFn: () => new Promise<string>((resolve) => {
+        queryFn: () => new Promise<string>((resolve, reject) => {
           const img = new Image();
           img.src = image.src;
-          img.onload = () => resolve(image.src);
+          img.onload = () => {
+            toast.success(`Image ${image.id} loaded successfully`);
+            resolve(image.src);
+          };
+          img.onerror = () => {
+            toast.error(`Failed to load image ${image.id}`);
+            reject(new Error(`Failed to load image ${image.id}`));
+          };
         }),
         staleTime: Infinity,
       });
@@ -34,7 +42,7 @@ const Portfolio = () => {
         backgroundRepeat: 'repeat',
       }}
     >
-      <div className="container">
+      <div className="container mx-auto px-4">
         <h2 
           id="portfolio-heading"
           className="text-3xl md:text-4xl font-bold mb-12 text-center text-tattoo-black leading-tight"

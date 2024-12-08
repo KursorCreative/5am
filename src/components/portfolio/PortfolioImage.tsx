@@ -1,7 +1,8 @@
-import { useState, memo } from "react";
+import { useState, memo, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 import PortfolioImageDialog from "./PortfolioImageDialog";
 import PortfolioImageLoader from "./PortfolioImageLoader";
+import { toast } from "sonner";
 
 interface PortfolioImageProps {
   src: string;
@@ -17,9 +18,14 @@ const PortfolioImage = memo(({ src, alt, category }: PortfolioImageProps) => {
     rootMargin: '100px'
   });
 
-  const handleImageLoad = () => {
+  const handleImageLoad = useCallback(() => {
     setIsLoaded(true);
-  };
+    toast.success(`${category} image loaded successfully`);
+  }, [category]);
+
+  const handleImageError = useCallback(() => {
+    toast.error(`Failed to load ${category} image`);
+  }, [category]);
 
   return (
     <PortfolioImageDialog src={src} alt={alt}>
@@ -35,7 +41,8 @@ const PortfolioImage = memo(({ src, alt, category }: PortfolioImageProps) => {
             <PortfolioImageLoader 
               src={src} 
               alt={alt} 
-              onLoad={handleImageLoad} 
+              onLoad={handleImageLoad}
+              onError={handleImageError}
             />
             <div 
               className={`absolute inset-0 bg-gradient-to-t from-tattoo-black/80 via-tattoo-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 ${

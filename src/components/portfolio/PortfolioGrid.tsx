@@ -1,23 +1,13 @@
-import { useInView } from "react-intersection-observer";
-import PortfolioImage from "./PortfolioImage";
-import { portfolioImages } from "./portfolioData";
 import { memo } from "react";
+import { portfolioImages } from "./portfolioData";
+import PortfolioImage from "./PortfolioImage";
 
 const PortfolioGrid = memo(() => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-    rootMargin: '50px'
-  });
-
   return (
     <div 
-      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${
-        inView ? 'animate-fade-in' : 'opacity-0'
-      }`}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       role="list"
       aria-label="Portfolio gallery"
-      ref={ref}
     >
       {portfolioImages.map((image) => (
         <PortfolioImage
