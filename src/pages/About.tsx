@@ -1,11 +1,33 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import SkipToContent from "@/components/SkipToContent";
 import TeamSection from "@/components/TeamSection";
 import PageHero from "@/components/PageHero";
+import ScrollProgress from "@/components/ScrollProgress";
+import CookieConsent from "@/components/CookieConsent";
 
 const AboutPage = () => {
+  useEffect(() => {
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About - 5am Tattoo Studio",
+      "description": "Learn about our talented artists and the story behind 5am Tattoo Studio.",
+      "url": "https://5amtattoo.com/about"
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   const breadcrumbs = [
     {
       label: "About",
@@ -16,6 +38,7 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-tattoo-black text-white">
       <SkipToContent />
+      <ScrollProgress />
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
@@ -31,6 +54,7 @@ const AboutPage = () => {
       </main>
       
       <Footer />
+      <CookieConsent />
     </div>
   );
 };

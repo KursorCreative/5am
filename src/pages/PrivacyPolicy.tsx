@@ -1,10 +1,32 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SkipToContent from "@/components/SkipToContent";
 import { Separator } from "@/components/ui/separator";
 import PageHero from "@/components/PageHero";
+import ScrollProgress from "@/components/ScrollProgress";
+import CookieConsent from "@/components/CookieConsent";
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy - 5am Tattoo Studio",
+      "description": "Read our privacy policy and learn how we protect your data at 5am Tattoo Studio.",
+      "url": "https://5amtattoo.com/privacy-policy"
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   const breadcrumbs = [
     {
       label: "Privacy Policy",
@@ -15,6 +37,7 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-white text-tattoo-black">
       <SkipToContent />
+      <ScrollProgress />
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
@@ -51,6 +74,7 @@ const PrivacyPolicy = () => {
       </main>
       
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
